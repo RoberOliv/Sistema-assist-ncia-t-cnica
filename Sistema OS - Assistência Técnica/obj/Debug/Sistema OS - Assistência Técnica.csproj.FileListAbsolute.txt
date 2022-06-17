@@ -1,0 +1,26 @@
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.exe.config
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.exe
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.pdb
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe.config
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CadastrarClientes.resources
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CadastrarServicos.resources
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica.form_ModuloServicoAndamento.resources
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica.Properties.Resources.resources
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.GenerateResource.cache
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe.licenses
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.CoreCompileInputs.cache
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.CopyComplete
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.pdb
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.AssemblyReference.cache
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_EditarServicos.resources
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
