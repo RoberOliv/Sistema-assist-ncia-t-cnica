@@ -24,3 +24,23 @@ C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assi
 C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.AssemblyReference.cache
 C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_EditarServicos.resources
 C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_EditarCadastrosClientes.resources
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.exe.config
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.exe
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.pdb
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.AssemblyReference.cache
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe.config
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CadastrarClientes.resources
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CadastrarServicos.resources
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_EditarServicos.resources
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_EditarCadastrosClientes.resources
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica.form_ModuloServicoAndamento.resources
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica.Properties.Resources.resources
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.GenerateResource.cache
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe.licenses
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.CoreCompileInputs.cache
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.CopyComplete
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe
+C:\Users\robin\OneDrive\Documentos\GitHub\Sistema-assist-ncia-t-cnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.pdb

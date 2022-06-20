@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sistema_OS___Assistência_Técnica._1___BancoGlobal;
 using Sistema_OS___Assistência_Técnica._2___Classes;
+using Sistema_OS___Assistência_Técnica.Properties;
 
 namespace Sistema_OS___Assistência_Técnica._3___Forms
 {
@@ -19,7 +20,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             InitializeComponent();
             InicilizarBancoGlobal();
-            txtDataDeCadastro.Text = DateTime.Now.ToShortDateString();
             formCadastrarServicos = _formCadastrarServicos;
         }
 
@@ -28,43 +28,56 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             BancoGlobal.IniciarTabelaCadastroServicos();
         }
 
-        private void MetodoFormataData(object sender, KeyPressEventArgs e)
+        private Decimal CalcularLucro()
         {
-            TextBox Data = sender as TextBox;
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
-            {
-                Data.SelectionStart = Data.Text.Length + 1;
 
-                if (Data.Text.Length == 2 || Data.Text.Length == 5)
-                    Data.Text += "/";
-                else if (Data.Text.Length == 10)
-                    Data.Text += "";
-                Data.SelectionStart = Data.Text.Length + 1;
+            decimal valorPeca = 0;
+            decimal valorServico = 0;
+            char[] caracteres = { 'R', '$' };
+
+
+            if (txtvalorPeca.Text != "")
+            {
+                
+                valorPeca = Convert.ToDecimal(txtvalorPeca.Text.TrimStart(caracteres));
             }
+
+            if (txtvalorServico.Text != "")
+            {
+                valorServico = Convert.ToDecimal(txtvalorServico.Text.TrimStart(caracteres));
+            }
+
+
+            decimal lucro = valorServico - valorPeca;
+
+            return lucro;
+
         }
 
-        private void MetodoSalvarAlteracaoServico()
+        private void SalvarAlteracaoServico()
         {
+            
+            if (txtAcessorios.Text.Length <= 0 || txtvalorServico.Text.Length <= 0 || txtAparelho.Text.Length <= 0 || txtDefeito.Text.Length <= 0|| txtSenha.Text.Length <= 0 || txtSituacao.Text.Length <= 0 || txtvalorPeca.Text.Length <= 0 ||
+                txtServicoFeito.Text.Length <= 0 )
+            {
+                MessageBox.Show("PREENCHA OS CAMPOS EM BRANCO PARA CONCLUIR A ALTERAÇÃO!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             foreach (CadastroServicoEstrutura servico in BancoGlobal.listaCadastrosServicosEstrutura)
             {
-                if (txtAcessorios.Text.Length < 0 || txtvalorPeca.Text.Length < 0 || txtvalorServico.Text.Length < 0 ||
-                    txtAparelho.Text.Length < 0 ||
-                    txtSenha.Text.Length < 0 || txtSituacao.Text.Length < 0 || txtvalorPeca.Text.Length < 0 ||
-                    txtServicoFeito.Text.Length < 0)
-                {
-                    MessageBox.Show("PREENCHA TODOS OS CAMPOS DE CADASTRO EM BRANCO.");
-                }
-
-                decimal lucro = Convert.ToDecimal(txtvalorServico.Text) - Convert.ToDecimal(txtvalorPeca.Text);
 
                 if (servico.sv_id == Convert.ToInt32(lbID.Text))
                 {
+                    Decimal lucro = CalcularLucro();
+                    char[] caracteres = { 'R', '$' };
+
                     servico.sv_aparelho = txtAparelho.Text;
-                    servico.sv_dataCadastro = Convert.ToDateTime(txtDataDeCadastro.Text);
+                    servico.sv_dataCadastro = dtpDataAtualCadastro.Value;
                     servico.sv_defeito = txtDefeito.Text;
                     servico.sv_senha = txtSenha.Text;
-                    servico.sv_valorServico = Convert.ToDecimal(txtvalorServico.Text);
-                    servico.sv_valorPeca = Convert.ToDecimal(txtvalorPeca.Text);
+                    servico.sv_valorServico = Convert.ToDecimal(txtvalorServico.Text.TrimStart(caracteres) == "" ? "0" : txtvalorServico.Text.TrimStart(caracteres));
+                    servico.sv_valorPeca = Convert.ToDecimal(txtvalorPeca.Text.TrimStart(caracteres) == "" ? "0" : txtvalorPeca.Text.TrimStart(caracteres));
                     servico.sv_servicoFeito = txtServicoFeito.Text;
                     servico.sv_situacao = txtSituacao.Text;
                     servico.sv_acessorios = txtAcessorios.Text;
@@ -72,18 +85,19 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
                     formCadastrarServicos.PreencherTabelaComDadosServicos();
 
-
                     MessageBox.Show("Dados alterados com Sucesso!", "SUCESSO", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     break;
+
                 }
             }
+
             this.Close();
         }
 
         private void btnSalvarAlteracaoServico_Click(object sender, EventArgs e)
         {
-           MetodoSalvarAlteracaoServico();
+           SalvarAlteracaoServico();
         }
 
         private void btnFecharJanela_Click(object sender, EventArgs e)
@@ -104,12 +118,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         private void txtvalorPeca_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDigitos.ApenasNumerosBackspace(e);
-        }
-
-        private void txtDataDeCadastro_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ValidarDigitos.ApenasNumerosBackspaceBarra(e);
-            MetodoFormataData(sender,e);
         }
 
         private void txtAparelho_KeyPress(object sender, KeyPressEventArgs e)
@@ -141,5 +149,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             ValidarDigitos.ApenasSpaceLetrasNumerosBackspace(e);
         }
+
     }
 }

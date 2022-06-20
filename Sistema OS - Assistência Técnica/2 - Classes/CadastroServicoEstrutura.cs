@@ -13,7 +13,6 @@ namespace Sistema_OS___Assistência_Técnica._2___Classes
         public int sv_fk_cl_idCliente { get; set; }
         public string sv_aparelho { get; set; }
         public string sv_defeito { get; set; }
-
         public  string sv_senha { get; set; }
         public string sv_situacao { get; set; }
         public string sv_acessorios { get; set; }
@@ -25,13 +24,13 @@ namespace Sistema_OS___Assistência_Técnica._2___Classes
         public string sv_servicoFeito { get; set; }
         public int sv_status { get; set; }
 
+        
 
         public CadastroServicoEstrutura(int _sv_id, int _sv_fk_cl_idCliente, string _sv_aparelho, string _sv_defeito, string _sv_senha,
             string _sv_situacao, string _sv_acessorios, DateTime _sv_dataCadastro, DateTime _sv_dataConclusao, decimal _sv_valorPeca,
             decimal _sv_valorServico, decimal _sv_lucroServico, string _sv_servicoFeito, int _sv_status)
 
         {
-
             sv_id = _sv_id;
             sv_fk_cl_idCliente = _sv_fk_cl_idCliente;
             sv_aparelho = _sv_aparelho;
@@ -47,8 +46,6 @@ namespace Sistema_OS___Assistência_Técnica._2___Classes
             sv_servicoFeito = _sv_servicoFeito;
             sv_status = _sv_status;
             
-
-
         }
 
     }

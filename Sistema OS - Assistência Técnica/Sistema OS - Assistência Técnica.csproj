@@ -37,8 +37,14 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\SISTEMA MARMORIA BELLAS PEDRAS\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\SISTEMA MARMORIA BELLAS PEDRAS\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
       <HintPath>..\..\SISTEMA MARMORIA BELLAS PEDRAS\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\SISTEMA MARMORIA BELLAS PEDRAS\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
       <HintPath>..\..\SISTEMA MARMORIA BELLAS PEDRAS\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
@@ -79,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="1 - BancoGlobal\BancoGlobal.cs" />
+    <Compile Include="2 - Classes\CadastroClienteEstrutura.cs" />
     <Compile Include="2 - Classes\CadastroServicoEstrutura.cs" />
     <Compile Include="2 - Classes\ValidarDigitos.cs" />
     <Compile Include="3 - Forms\form_CadastrarClientes.cs">
@@ -99,11 +106,17 @@
     <Compile Include="3 - Forms\form_EditarServicos.Designer.cs">
       <DependentUpon>form_EditarServicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="3 - Forms\form_ModuloServicoAndamento.cs">
+    <Compile Include="3 - Forms\form_EditarCadastrosClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="3 - Forms\form_ModuloServicoAndamento.Designer.cs">
-      <DependentUpon>form_ModuloServicoAndamento.cs</DependentUpon>
+    <Compile Include="3 - Forms\form_EditarCadastrosClientes.Designer.cs">
+      <DependentUpon>form_EditarCadastrosClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Forms\form_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Forms\form_Principal.Designer.cs">
+      <DependentUpon>form_Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,8 +129,11 @@
     <EmbeddedResource Include="3 - Forms\form_EditarServicos.resx">
       <DependentUpon>form_EditarServicos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="3 - Forms\form_ModuloServicoAndamento.resx">
-      <DependentUpon>form_ModuloServicoAndamento.cs</DependentUpon>
+    <EmbeddedResource Include="3 - Forms\form_EditarCadastrosClientes.resx">
+      <DependentUpon>form_EditarCadastrosClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Forms\form_Principal.resx">
+      <DependentUpon>form_Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -178,6 +194,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-excluir-500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vassoura-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gestão-de-cliente-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-e-mail-para-celular-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-telefone-celular-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-card-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-adicionar-usuário-masculino-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usb-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
