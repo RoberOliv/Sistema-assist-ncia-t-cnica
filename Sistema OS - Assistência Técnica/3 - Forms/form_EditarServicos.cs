@@ -16,14 +16,25 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
     public partial class form_EditarServicos : Form
     {
         private form_CadastrarServicos formCadastrarServicos;
+        private form_ServicosConcluidos formServicosConcluidos;
+
         public form_EditarServicos(form_CadastrarServicos _formCadastrarServicos)
         {
             InitializeComponent();
-            InicilizarBancoGlobal();
+            InicializarBancoGlobal();
             formCadastrarServicos = _formCadastrarServicos;
+
+        }
+        public form_EditarServicos(form_ServicosConcluidos _formServicosConcluidos)
+        {
+            InitializeComponent();
+            InicializarBancoGlobal();
+            formServicosConcluidos = _formServicosConcluidos;
+
         }
 
-        private void InicilizarBancoGlobal()
+
+        private void InicializarBancoGlobal()
         {
             BancoGlobal.IniciarTabelaCadastroServicos();
         }
@@ -38,7 +49,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
             if (txtvalorPeca.Text != "")
             {
-                
+
                 valorPeca = Convert.ToDecimal(txtvalorPeca.Text.TrimStart(caracteres));
             }
 
@@ -56,9 +67,9 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void SalvarAlteracaoServico()
         {
-            
-            if (txtAcessorios.Text.Length <= 0 || txtvalorServico.Text.Length <= 0 || txtAparelho.Text.Length <= 0 || txtDefeito.Text.Length <= 0|| txtSenha.Text.Length <= 0 || txtSituacao.Text.Length <= 0 || txtvalorPeca.Text.Length <= 0 ||
-                txtServicoFeito.Text.Length <= 0 )
+
+            if (txtAcessorios.Text.Length <= 0 || txtvalorServico.Text.Length <= 0 || txtAparelho.Text.Length <= 0 || txtDefeito.Text.Length <= 0 || txtSenha.Text.Length <= 0 || txtSituacao.Text.Length <= 0 || txtvalorPeca.Text.Length <= 0 ||
+                txtServicoFeito.Text.Length <= 0)
             {
                 MessageBox.Show("PREENCHA OS CAMPOS EM BRANCO PARA CONCLUIR A ALTERAÇÃO!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -83,7 +94,15 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                     servico.sv_acessorios = txtAcessorios.Text;
                     servico.sv_lucroServico = lucro;
 
-                    formCadastrarServicos.PreencherTabelaComDadosServicos();
+                    if (formServicosConcluidos != null)
+                    {
+                        formServicosConcluidos.PreencherTabelaComDadosServicosConcluidos();
+
+                    }
+                    else if (formCadastrarServicos != null)
+                    {
+                        formCadastrarServicos.PreencherTabelaComDadosServicosAndamentos();
+                    }
 
                     MessageBox.Show("Dados alterados com Sucesso!", "SUCESSO", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
@@ -97,7 +116,9 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void btnSalvarAlteracaoServico_Click(object sender, EventArgs e)
         {
-           SalvarAlteracaoServico();
+            pctHome.Image = Resources.icons8_alterar_100__1_;
+            lblHome.Text = "ALTERAR DADOS";
+            SalvarAlteracaoServico();
         }
 
         private void btnFecharJanela_Click(object sender, EventArgs e)
@@ -150,5 +171,10 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             ValidarDigitos.ApenasSpaceLetrasNumerosBackspace(e);
         }
 
+        private void btnConcluirAbrirGarantia_Click(object sender, EventArgs e)
+        {
+            pctHome.Image = Resources.icons8_garantia_100;
+            lblHome.Text = "EMITIR GARANTIA";
+        }
     }
 }

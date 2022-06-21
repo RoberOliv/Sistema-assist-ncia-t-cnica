@@ -112,11 +112,23 @@
     <Compile Include="3 - Forms\form_EditarCadastrosClientes.Designer.cs">
       <DependentUpon>form_EditarCadastrosClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="3 - Forms\form_GarantiaServicoConcluido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Forms\form_GarantiaServicoConcluido.Designer.cs">
+      <DependentUpon>form_GarantiaServicoConcluido.cs</DependentUpon>
+    </Compile>
     <Compile Include="3 - Forms\form_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="3 - Forms\form_Principal.Designer.cs">
       <DependentUpon>form_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Forms\form_ServicosConcluidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Forms\form_ServicosConcluidos.Designer.cs">
+      <DependentUpon>form_ServicosConcluidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,8 +144,14 @@
     <EmbeddedResource Include="3 - Forms\form_EditarCadastrosClientes.resx">
       <DependentUpon>form_EditarCadastrosClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="3 - Forms\form_GarantiaServicoConcluido.resx">
+      <DependentUpon>form_GarantiaServicoConcluido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="3 - Forms\form_Principal.resx">
       <DependentUpon>form_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Forms\form_ServicosConcluidos.resx">
+      <DependentUpon>form_ServicosConcluidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -215,6 +233,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-usb-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-editar-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-garantia-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-selecionado-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

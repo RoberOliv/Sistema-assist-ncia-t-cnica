@@ -121,6 +121,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtSituacao = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtServicoFeito = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtSenha = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.contextConcluirServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_CadastroServicos)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -220,21 +221,22 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editarToolStripMenuItem,
-            this.deletarToolStripMenuItem});
+            this.deletarToolStripMenuItem,
+            this.contextConcluirServiçoToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(112, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // deletarToolStripMenuItem
             // 
             this.deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
-            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deletarToolStripMenuItem.Text = "Deletar";
             this.deletarToolStripMenuItem.Click += new System.EventHandler(this.deletarToolStripMenuItem_Click);
             // 
@@ -1572,6 +1574,13 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtSenha.WordWrap = true;
             this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
+            // contextConcluirServiçoToolStripMenuItem
+            // 
+            this.contextConcluirServiçoToolStripMenuItem.Name = "contextConcluirServiçoToolStripMenuItem";
+            this.contextConcluirServiçoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contextConcluirServiçoToolStripMenuItem.Text = "Concluir Serviço";
+            this.contextConcluirServiçoToolStripMenuItem.Click += new System.EventHandler(this.contextConcluirServiçoToolStripMenuItem_Click);
+            // 
             // form_CadastrarServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1691,5 +1700,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         private Bunifu.UI.WinForms.BunifuDatePicker dtpDataConclusao;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel12;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel15;
+        private System.Windows.Forms.ToolStripMenuItem contextConcluirServiçoToolStripMenuItem;
     }
 }

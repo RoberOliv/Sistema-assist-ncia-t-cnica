@@ -29,7 +29,7 @@ namespace Sistema_OS___Assistência_Técnica._1___BancoGlobal
                 BancoGlobal.listaCadastrosServicosEstrutura.Add(new CadastroServicoEstrutura(5, 5, "Smartphone Infinix Note 10 Pro", "Aparelho não liga", "5468", "O Aparelho não liga", "Deixou um carregador tipo C", Convert.ToDateTime("10/07/2022"), Convert.ToDateTime("14/05/2022"), 250, 800, 550, "Feita a troca da placa do aparelho celular", 1));
                 BancoGlobal.listaCadastrosServicosEstrutura.Add(new CadastroServicoEstrutura(6, 6, "Huawei Nova 5T ", "Pelicula de vidro", "N/A", "Aparelho Novo", "N/A", Convert.ToDateTime("18/07/2022"), Convert.ToDateTime("22/07/2022"), 15, 30, 15, "Aplicação de uma pelicula de vidro", 1));
                 BancoGlobal.listaCadastrosServicosEstrutura.Add(new CadastroServicoEstrutura(7, 7, "Smartphone Samsung Galaxy S22 Ultra", "Visor da camera trincado", "xyJz", "Cliente trouxe o aparelho celular com o visor da camera traseira trincada", "N/A", Convert.ToDateTime("26/07/2022"), Convert.ToDateTime("30/07/2022"), 100, 300, 200, "Visor da camera traseira foi substituída por uma nova", 1));
-               
+                
                 tabelaCadastroServicoEstruturaInicializou = true;
             }
 
@@ -46,7 +46,7 @@ namespace Sistema_OS___Assistência_Técnica._1___BancoGlobal
                 BancoGlobal.listaCadastrosClientesEstrutura.Add(new CadastroClienteEstrutura(5, "Jorge", "(71) 0000-0000", "000.000.000-00", "(71) 9738-0419", true));
                 BancoGlobal.listaCadastrosClientesEstrutura.Add(new CadastroClienteEstrutura(6, "Tiago", "(71) 0000-0000", "000.000.000-00", "(71) 9738-0419", true));
                 BancoGlobal.listaCadastrosClientesEstrutura.Add(new CadastroClienteEstrutura(7, "Flávio", "(71) 0000-0000", "000.000.000-00", "(71) 9738-0419", true));
-                
+            
                 tabelaCadastroClienteEstruturaInicializou = true;
             }
         }

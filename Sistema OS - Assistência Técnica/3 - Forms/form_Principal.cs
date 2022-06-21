@@ -16,7 +16,7 @@ namespace Sistema_OS___Assistência_Técnica
 {
     public partial class form_ModuloServicoAndamento : Form
     {
-       
+        
         public form_ModuloServicoAndamento()
         {
             InitializeComponent();
@@ -59,6 +59,11 @@ namespace Sistema_OS___Assistência_Técnica
         private void btnMinimizarJanela_Click_1(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnServicosConcluidos_Click(object sender, EventArgs e)
+        {
+            showChildForminPanel(new form_ServicosConcluidos());
         }
     }
 }

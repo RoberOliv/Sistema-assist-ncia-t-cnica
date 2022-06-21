@@ -50,8 +50,8 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             foreach (CadastroClienteEstrutura cadastro in BancoGlobal.listaCadastrosClientesEstrutura)
             {
-                dt.Rows.Add(cadastro.sv_id, cadastro.sv_nome, cadastro.sv_telefone, cadastro.sv_cpf,
-                    cadastro.sv_telefone_recado);
+                dt.Rows.Add(cadastro.cl_id, cadastro.cl_nome, cadastro.cl_telefone, cadastro.cl_cpf,
+                    cadastro.cl_telefone_recado);
             }
         }
 
@@ -131,10 +131,10 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                     DataTable dt = CriarDataTableClientes();
                     foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
                     {
-                        if (cliente.sv_nome == txtBuscarClienteNomeEDocumento.Text)
+                        if (cliente.cl_nome == txtBuscarClienteNomeEDocumento.Text)
                         {
-                            dt.Rows.Add(cliente.sv_id, cliente.sv_nome, cliente.sv_cpf, cliente.sv_telefone,
-                                cliente.sv_telefone_recado);
+                            dt.Rows.Add(cliente.cl_id, cliente.cl_nome, cliente.cl_cpf, cliente.cl_telefone,
+                                cliente.cl_telefone_recado);
 
                             MessageBox.Show("CLIENTE ENCONTRADO COM SUCESSO", "BUSCA", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
@@ -152,10 +152,10 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                     DataTable dt = CriarDataTableClientes();
                     foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
                     {
-                        if (cliente.sv_cpf == txtBuscarClienteNomeEDocumento.Text)
+                        if (cliente.cl_cpf == txtBuscarClienteNomeEDocumento.Text)
                         {
-                            dt.Rows.Add(cliente.sv_id, cliente.sv_nome, cliente.sv_cpf, cliente.sv_telefone,
-                                cliente.sv_telefone_recado);
+                            dt.Rows.Add(cliente.cl_id, cliente.cl_nome, cliente.cl_cpf, cliente.cl_telefone,
+                                cliente.cl_telefone_recado);
 
                             MessageBox.Show("CPF ENCONTRADO COM SUCESSO", "BUSCA", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
@@ -260,7 +260,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                 foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
                 {
 
-                    if (cliente.sv_id == Convert.ToInt32(gdv_CadastroClientes.SelectedCells[0].Value.ToString()))
+                    if (cliente.cl_id == Convert.ToInt32(gdv_CadastroClientes.SelectedCells[0].Value.ToString()))
                     {
                         if (MessageBox.Show("TEM CERTEZA? ", "ATENÇÃO", MessageBoxButtons.YesNo,
                                 MessageBoxIcon.Question) ==

@@ -121,6 +121,16 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnServicosConcluidos.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMQAAABGCAYAAACT3ju4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADZSURBVHhe7dMhEcQwAADBKE+9RURIZVRAf54dqIMsWHT4
+        xtzrvvZ64XT/F8ZXgFMZAsIQEIaAMASEISAMAWEICENAGALCEBCGgDAEhCEgDAFhCAhDQBgCwhAQhoAw
+        BIQhIAwBYQgIQ0AYAsIQEIaAMASEISAMAWEICENAGALCEBCGgDAEhCEgDAFhCAhDQBgCwhAQhoAwBIQh
+        IAwBYQgIQ0AYAsIQEIaAMASEISAMAWEICENAGALCEBCGgDAEhCEgDAFhCAhDQBgCwhAQhoAYc6/nK8Bp
+        5l7PDwp4bFh0PnoaAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="btnMinimizarJanela.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC4AAAAvCAYAAACc5fiSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

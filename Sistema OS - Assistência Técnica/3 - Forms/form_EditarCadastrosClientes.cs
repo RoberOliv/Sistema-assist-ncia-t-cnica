@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sistema_OS___Assistência_Técnica._1___BancoGlobal;
 using Sistema_OS___Assistência_Técnica._2___Classes;
+using Sistema_OS___Assistência_Técnica.Properties;
 
 namespace Sistema_OS___Assistência_Técnica._3___Forms
 {
@@ -34,6 +35,8 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void btnSalvarAlteracaoServico_Click(object sender, EventArgs e)
         {
+            pctHome.Image = Resources.icons8_alterar_100__1_;
+            lblHome.Text = "ALTERAR DADOS";
 
             if (txtNomeCliente.Text.Length <= 0 || txtDocumentoCPF.Text.Length <= 0 || txtNumeroTelefone.Text.Length <= 0 || txtTelefoneRecado.Text.Length <= 0)
             {
@@ -44,13 +47,13 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
             {
 
-                if (cliente.sv_id == Convert.ToInt32(lblAlteracaoClientes.Text))
+                if (cliente.cl_id == Convert.ToInt32(lblAlteracaoClientes.Text))
                 {
 
-                    cliente.sv_nome = txtNomeCliente.Text;
-                    cliente.sv_telefone = txtNumeroTelefone.Text;
-                    cliente.sv_cpf = txtDocumentoCPF.Text;
-                    cliente.sv_telefone_recado = txtTelefoneRecado.Text;
+                    cliente.cl_nome = txtNomeCliente.Text;
+                    cliente.cl_telefone = txtNumeroTelefone.Text;
+                    cliente.cl_cpf = txtDocumentoCPF.Text;
+                    cliente.cl_telefone_recado = txtTelefoneRecado.Text;
 
                     MessageBox.Show("Dados alterados com Sucesso!", "SUCESSO", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);

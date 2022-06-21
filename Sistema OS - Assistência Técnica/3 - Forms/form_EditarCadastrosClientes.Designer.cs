@@ -440,7 +440,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // pctHome
             // 
             this.pctHome.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pctHome.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_alterar_100__1_;
+            this.pctHome.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_editar_100;
             this.pctHome.Location = new System.Drawing.Point(93, 14);
             this.pctHome.Name = "pctHome";
             this.pctHome.Size = new System.Drawing.Size(33, 31);
@@ -456,12 +456,12 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.lblHome.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblHome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.lblHome.ForeColor = System.Drawing.Color.White;
-            this.lblHome.Location = new System.Drawing.Point(146, 24);
+            this.lblHome.Location = new System.Drawing.Point(145, 24);
             this.lblHome.Name = "lblHome";
             this.lblHome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblHome.Size = new System.Drawing.Size(96, 15);
+            this.lblHome.Size = new System.Drawing.Size(87, 15);
             this.lblHome.TabIndex = 97;
-            this.lblHome.Text = "ALTERAR DADOS";
+            this.lblHome.Text = "EDITAR DADOS";
             this.lblHome.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblHome.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

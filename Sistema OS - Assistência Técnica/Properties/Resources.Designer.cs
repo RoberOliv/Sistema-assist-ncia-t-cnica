@@ -123,9 +123,29 @@ namespace Sistema_OS___Assistência_Técnica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_editar_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-editar-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_excluir_500 {
             get {
                 object obj = ResourceManager.GetObject("icons8-excluir-500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_garantia_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-garantia-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +203,29 @@ namespace Sistema_OS___Assistência_Técnica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_ok_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-ok-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_pesquisar_100__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-pesquisar-100 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_selecionado_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-selecionado-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -28,12 +28,13 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             InicilizarBancoGlobal();
 
             CarregarComboBoxClientes();
-            PreencherTabelaComDadosServicos();
+            PreencherTabelaComDadosServicosAndamentos();
             formModulo = _formModulo;
             CalcularLucro();
             dtpDataAtualCadastro.Text = DateTime.Now.ToShortDateString();
 
         }
+
 
         //MÉTODO SEM RETORNO ( QUANDO VOID NÃO RETORNA NADA )
         private void InicilizarBancoGlobal()
@@ -46,7 +47,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
             {
-                cmbCliente.Items.Add(cliente.sv_nome);
+                cmbCliente.Items.Add(cliente.cl_nome);
             }
         }
 
@@ -54,7 +55,8 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         private DataTable CriarDataTableServicos()
         {
             DataTable dt = new DataTable();
-            dt.Columns.Add("Data de Cadastro"); ;
+            dt.Columns.Add("Data de Cadastro");
+            ;
             dt.Columns.Add("ID");
             dt.Columns.Add("Nome Cliente");
             dt.Columns.Add("Aparelho");
@@ -76,12 +78,18 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             foreach (CadastroServicoEstrutura cadastro in BancoGlobal.listaCadastrosServicosEstrutura)
             {
-                dt.Rows.Add(cadastro.sv_dataCadastro.ToShortDateString(), cadastro.sv_id,BuscarNomeCliente(cadastro.sv_fk_cl_idCliente),
-                    cadastro.sv_aparelho,
-                    cadastro.sv_defeito, cadastro.sv_senha,
-                    cadastro.sv_situacao, cadastro.sv_acessorios, cadastro.sv_valorServico, cadastro.sv_valorPeca,
-                    cadastro.sv_lucroServico.ToString("C"), cadastro.sv_servicoFeito, cadastro.sv_dataConclusao.ToShortDateString(),
-                    (cadastro.sv_status == 1) ? "Em Andamento" : "Concluido");
+                if (cadastro.sv_status == 1)
+                {
+                    dt.Rows.Add(cadastro.sv_dataCadastro.ToShortDateString(), cadastro.sv_id,
+                        BuscarNomeCliente(cadastro.sv_fk_cl_idCliente),
+                        cadastro.sv_aparelho,
+                        cadastro.sv_defeito, cadastro.sv_senha,
+                        cadastro.sv_situacao, cadastro.sv_acessorios, cadastro.sv_valorServico, cadastro.sv_valorPeca,
+                        cadastro.sv_lucroServico.ToString("C"), cadastro.sv_servicoFeito,
+                        cadastro.sv_dataConclusao.ToShortDateString(),
+                        (cadastro.sv_status == 1) ? "Em Andamento" : "Concluido");
+                }
+
             }
         }
 
@@ -89,11 +97,12 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
             {
-                if (cliente.sv_id == _idCliente)
+                if (cliente.cl_id == _idCliente)
                 {
-                    return cliente.sv_nome;
+                    return cliente.cl_nome;
                 }
             }
+
             return "";
         }
 
@@ -140,11 +149,12 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                         ClearTextBox();
                     }
                 }
+
                 gdv_CadastroServicos.DataSource = dt;
             }
         }
 
-        public void PreencherTabelaComDadosServicos()
+        public void PreencherTabelaComDadosServicosAndamentos()
         {
             DataTable dt = CriarDataTableServicos();
             AdicionarLinhaGridView(dt);
@@ -192,9 +202,9 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
             {
-                if (cliente.sv_nome == _Nome)
+                if (cliente.cl_nome == _Nome)
                 {
-                    return cliente.sv_id;
+                    return cliente.cl_id;
                 }
             }
 
@@ -204,7 +214,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         private void CadastrarServicos()
         {
             //Verificação
-            if ( cmbCliente.Text.Length <= 0 || txtAparelho.Text.Length <= 0 || txtDefeito.Text.Length <= 0)
+            if (cmbCliente.Text.Length <= 0 || txtAparelho.Text.Length <= 0 || txtDefeito.Text.Length <= 0)
             {
                 MessageBox.Show("INSIRA OS CAMPOS OBRIGATÓRIOS!", "Atenção", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
@@ -221,9 +231,11 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             BancoGlobal.listaCadastrosServicosEstrutura.Add(new CadastroServicoEstrutura(novaID + 1,
                 BuscarIDCliente(cmbCliente.Text), txtAparelho.Text, txtDefeito.Text, txtSenha.Text, txtSituacao.Text,
                 txtAcessorios.Text,
-                dtpDataAtualCadastro.Value, dtpDataConclusao.Value, Convert.ToDecimal(txtvalorPeca.Text == "" ? "0" : txtvalorPeca.Text),
-                Convert.ToDecimal(txtvalorServico.Text == "" ? "0" : txtvalorServico.Text), lucro, txtServicoFeito.Text, 1));
-                                                  //Ternário é um if else simplificado.
+                dtpDataAtualCadastro.Value, dtpDataConclusao.Value,
+                Convert.ToDecimal(txtvalorPeca.Text == "" ? "0" : txtvalorPeca.Text),
+                Convert.ToDecimal(txtvalorServico.Text == "" ? "0" : txtvalorServico.Text), lucro, txtServicoFeito.Text,
+                1));
+            //Ternário é um if else simplificado.
 
             MessageBox.Show("Serviço cadastrado com Sucesso!", "SUCESSO", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
@@ -236,13 +248,13 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             formModulo.pctHome.Image = Resources.icons8_mais_2_matemática_100__1_;
             formModulo.lblHome.Text = "CADASTRAR";
             CadastrarServicos();
-            PreencherTabelaComDadosServicos();
+            PreencherTabelaComDadosServicosAndamentos();
             gdv_CadastroServicos.ClearSelection();
         }
 
         private void btnBuscarServicoEmAndamento_Click(object sender, EventArgs e)
         {
-           BuscarServicoAndamento();
+            BuscarServicoAndamento();
         }
 
         private void txtBuscarServicoAparelho_KeyUp(object sender, KeyEventArgs e)
@@ -250,7 +262,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
             if (txtBuscarServicoAparelho.Text == "")
             {
-                PreencherTabelaComDadosServicos();
+                PreencherTabelaComDadosServicosAndamentos();
             }
         }
 
@@ -299,9 +311,13 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                         DialogResult.Yes)
                     {
                         BancoGlobal.listaCadastrosServicosEstrutura.Remove(servico);
-                        PreencherTabelaComDadosServicos();
+                        PreencherTabelaComDadosServicosAndamentos();
                         break;
 
+                    }
+                    else
+                    {
+                        break;
                     }
                 }
             }
@@ -353,7 +369,33 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             ValidarDigitos.ApenasNumerosBackspace(e);
         }
 
+        private void contextConcluirServiçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            DataTable dt = CriarDataTableServicos();
+            AdicionarLinhaGridView(dt);
+
+            foreach (CadastroServicoEstrutura servico in BancoGlobal.listaCadastrosServicosEstrutura)
+            {
+
+                if (servico.sv_id == Convert.ToInt32(gdv_CadastroServicos.SelectedCells[1].Value.ToString()))
+                {
+                    if (servico.sv_status == 1)
+                    {
+                        if (MessageBox.Show("TEM CERTEZA? ", "ATENÇÃO", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            servico.sv_status = 0;
+                            PreencherTabelaComDadosServicosAndamentos();
+                            break;
+
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+
 
 
