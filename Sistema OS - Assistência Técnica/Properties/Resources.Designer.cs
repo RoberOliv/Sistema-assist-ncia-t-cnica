@@ -73,29 +73,9 @@ namespace Sistema_OS___Assistência_Técnica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_adicionar_usuário_masculino_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-adicionar-usuário-masculino-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_alterar_100__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-alterar-100 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_card_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-card-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,49 +93,9 @@ namespace Sistema_OS___Assistência_Técnica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_e_mail_para_celular_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-e-mail-para-celular-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_editar_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-editar-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_excluir_500 {
             get {
                 object obj = ResourceManager.GetObject("icons8-excluir-500", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_garantia_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-garantia-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_gestão_de_cliente_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-gestão-de-cliente-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,29 +143,9 @@ namespace Sistema_OS___Assistência_Técnica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_ok_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-ok-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_pesquisar_100__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-pesquisar-100 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_selecionado_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-selecionado-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,26 +176,6 @@ namespace Sistema_OS___Assistência_Técnica.Properties {
         internal static System.Drawing.Bitmap icons8_subtração_34__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-subtração-34 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_telefone_celular_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-telefone-celular-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_usb_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-usb-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

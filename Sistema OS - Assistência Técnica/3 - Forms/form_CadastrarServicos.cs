@@ -20,21 +20,17 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         //VARIAVEL DO TIPO FORM MODULO SERVIÇO ANDAMENTO
         private form_ModuloServicoAndamento formModulo;
 
-
-        //CONSTRUTOR PQ TEM O MESMO NOME DO FORM        (PARAMETRO)        
+        //CONSTRUTOR PQ TEM O MESMO NOME DO FORM        (PARAMETRO)
         public form_CadastrarServicos(form_ModuloServicoAndamento _formModulo)
         {
             InitializeComponent();
             InicilizarBancoGlobal();
 
             CarregarComboBoxClientes();
-            PreencherTabelaComDadosServicosAndamentos();
+            PreencherTabelaComDadosServicos();
             formModulo = _formModulo;
             CalcularLucro();
-            dtpDataAtualCadastro.Text = DateTime.Now.ToShortDateString();
-
         }
-
 
         //MÉTODO SEM RETORNO ( QUANDO VOID NÃO RETORNA NADA )
         private void InicilizarBancoGlobal()
@@ -55,8 +51,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         private DataTable CriarDataTableServicos()
         {
             DataTable dt = new DataTable();
-            dt.Columns.Add("Data de Cadastro");
-            ;
+            dt.Columns.Add("Data de Cadastro"); ;
             dt.Columns.Add("ID");
             dt.Columns.Add("Nome Cliente");
             dt.Columns.Add("Aparelho");
@@ -78,18 +73,12 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             foreach (CadastroServicoEstrutura cadastro in BancoGlobal.listaCadastrosServicosEstrutura)
             {
-                if (cadastro.sv_status == 1)
-                {
-                    dt.Rows.Add(cadastro.sv_dataCadastro.ToShortDateString(), cadastro.sv_id,
-                        BuscarNomeCliente(cadastro.sv_fk_cl_idCliente),
-                        cadastro.sv_aparelho,
-                        cadastro.sv_defeito, cadastro.sv_senha,
-                        cadastro.sv_situacao, cadastro.sv_acessorios, cadastro.sv_valorServico, cadastro.sv_valorPeca,
-                        cadastro.sv_lucroServico.ToString("C"), cadastro.sv_servicoFeito,
-                        cadastro.sv_dataConclusao.ToShortDateString(),
-                        (cadastro.sv_status == 1) ? "Em Andamento" : "Concluido");
-                }
-
+                dt.Rows.Add(cadastro.sv_dataCadastro.ToShortDateString(), cadastro.sv_id, BuscarNomeCliente(cadastro.sv_fk_cl_idCliente),
+                    cadastro.sv_aparelho,
+                    cadastro.sv_defeito, cadastro.sv_senha,
+                    cadastro.sv_situacao, cadastro.sv_acessorios, cadastro.sv_valorServico, cadastro.sv_valorPeca,
+                    cadastro.sv_lucroServico.ToString("C"), cadastro.sv_servicoFeito, cadastro.sv_dataConclusao.ToShortDateString(),
+                    (cadastro.sv_status == 1) ? "Em Andamento" : "Concluido");
             }
         }
 
@@ -102,7 +91,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                     return cliente.cl_nome;
                 }
             }
-
             return "";
         }
 
@@ -122,10 +110,10 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             form.ShowDialog();
         }
 
-        public void BuscarServicoAndamento()
+        public void MetodoBuscarServicoAndamento() //#5 - Nome de metodo nao precisa escrever "Metodo" kk ja é entendido q é um metodo..
         {
             formModulo.pctHome.Image = Resources.icons8_pesquisar_100__1_;
-            formModulo.lblHome.Text = "BUSCAR SERVIÇOS";
+            formModulo.lblHome.Text = "BUSCAR SERVIÇO";
 
             if (txtBuscarServicoAparelho.Text == "")
             {
@@ -149,12 +137,11 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                         ClearTextBox();
                     }
                 }
-
                 gdv_CadastroServicos.DataSource = dt;
             }
         }
 
-        public void PreencherTabelaComDadosServicosAndamentos()
+        public void PreencherTabelaComDadosServicos()
         {
             DataTable dt = CriarDataTableServicos();
             AdicionarLinhaGridView(dt);
@@ -178,10 +165,8 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private Decimal CalcularLucro()
         {
-
             decimal valorServico = 0;
             decimal valorPeca = 0;
-
 
             if (txtvalorPeca.Text != "")
             {
@@ -223,18 +208,14 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
             Decimal lucro = CalcularLucro();
 
-
-            int novaID = BancoGlobal.listaCadastrosServicosEstrutura.Count;
-            int novaIDCliente = BancoGlobal.listaCadastrosServicosEstrutura.Count;
-
+            int novaID = BancoGlobal.listaCadastrosServicosEstrutura.Count; //#3 - Id de quem?  -> novaIdServico
+            int novaIDCliente = BancoGlobal.listaCadastrosServicosEstrutura.Count;//#6 - Evite deixar variaveis nao utilizadas no codigo.
 
             BancoGlobal.listaCadastrosServicosEstrutura.Add(new CadastroServicoEstrutura(novaID + 1,
                 BuscarIDCliente(cmbCliente.Text), txtAparelho.Text, txtDefeito.Text, txtSenha.Text, txtSituacao.Text,
                 txtAcessorios.Text,
-                dtpDataAtualCadastro.Value, dtpDataConclusao.Value,
-                Convert.ToDecimal(txtvalorPeca.Text == "" ? "0" : txtvalorPeca.Text),
-                Convert.ToDecimal(txtvalorServico.Text == "" ? "0" : txtvalorServico.Text), lucro, txtServicoFeito.Text,
-                1));
+                dtpDataAtualCadastro.Value, dtpDataConclusao.Value, Convert.ToDecimal(txtvalorPeca.Text == "" ? "0" : txtvalorPeca.Text),
+                Convert.ToDecimal(txtvalorServico.Text == "" ? "0" : txtvalorServico.Text), lucro, txtServicoFeito.Text, 1));
             //Ternário é um if else simplificado.
 
             MessageBox.Show("Serviço cadastrado com Sucesso!", "SUCESSO", MessageBoxButtons.OK,
@@ -248,28 +229,26 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             formModulo.pctHome.Image = Resources.icons8_mais_2_matemática_100__1_;
             formModulo.lblHome.Text = "CADASTRAR";
             CadastrarServicos();
-            PreencherTabelaComDadosServicosAndamentos();
+            PreencherTabelaComDadosServicos();
             gdv_CadastroServicos.ClearSelection();
         }
 
         private void btnBuscarServicoEmAndamento_Click(object sender, EventArgs e)
         {
-            BuscarServicoAndamento();
+            MetodoBuscarServicoAndamento();
         }
 
         private void txtBuscarServicoAparelho_KeyUp(object sender, KeyEventArgs e)
         {
-
             if (txtBuscarServicoAparelho.Text == "")
             {
-                PreencherTabelaComDadosServicosAndamentos();
+                PreencherTabelaComDadosServicos();
             }
         }
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int qtdDeLinhasSelecionadas = gdv_CadastroServicos.SelectedRows.Count;
-
 
             if (qtdDeLinhasSelecionadas == 0)
             {
@@ -296,7 +275,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                 MessageBox.Show("SELECIONE ALGUMA LINHA DA TABELA PARA EDITAR OU DELETAR OS DADOS!", "ATENÇÃO",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
-
             }
 
             DataTable dt = CriarDataTableServicos();
@@ -304,19 +282,13 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
             foreach (CadastroServicoEstrutura servico in BancoGlobal.listaCadastrosServicosEstrutura)
             {
-
                 if (servico.sv_id == Convert.ToInt32(gdv_CadastroServicos.SelectedCells[1].Value.ToString()))
                 {
                     if (MessageBox.Show("TEM CERTEZA? ", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                         DialogResult.Yes)
                     {
                         BancoGlobal.listaCadastrosServicosEstrutura.Remove(servico);
-                        PreencherTabelaComDadosServicosAndamentos();
-                        break;
-
-                    }
-                    else
-                    {
+                        PreencherTabelaComDadosServicos();
                         break;
                     }
                 }
@@ -335,7 +307,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void txtBuscarServicoAparelho_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             ValidarDigitos.ApenasSpaceLetrasNumerosBackspace(e);
         }
 
@@ -368,34 +339,5 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             ValidarDigitos.ApenasNumerosBackspace(e);
         }
-
-        private void contextConcluirServiçoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            DataTable dt = CriarDataTableServicos();
-            AdicionarLinhaGridView(dt);
-
-            foreach (CadastroServicoEstrutura servico in BancoGlobal.listaCadastrosServicosEstrutura)
-            {
-
-                if (servico.sv_id == Convert.ToInt32(gdv_CadastroServicos.SelectedCells[1].Value.ToString()))
-                {
-                    if (servico.sv_status == 1)
-                    {
-                        if (MessageBox.Show("TEM CERTEZA? ", "ATENÇÃO", MessageBoxButtons.YesNo,
-                                MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            servico.sv_status = 0;
-                            PreencherTabelaComDadosServicosAndamentos();
-                            break;
-
-                        }
-                    }
-                }
-            }
-        }
     }
 }
-
-
-

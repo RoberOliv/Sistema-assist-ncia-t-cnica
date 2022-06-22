@@ -24,8 +24,6 @@ namespace Sistema_OS___Assistência_Técnica._2___Classes
         public string sv_servicoFeito { get; set; }
         public int sv_status { get; set; }
 
-        
-
         public CadastroServicoEstrutura(int _sv_id, int _sv_fk_cl_idCliente, string _sv_aparelho, string _sv_defeito, string _sv_senha,
             string _sv_situacao, string _sv_acessorios, DateTime _sv_dataCadastro, DateTime _sv_dataConclusao, decimal _sv_valorPeca,
             decimal _sv_valorServico, decimal _sv_lucroServico, string _sv_servicoFeito, int _sv_status)

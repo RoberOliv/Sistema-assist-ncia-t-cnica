@@ -31,7 +31,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_EditarServicos));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -65,6 +64,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_EditarServicos));
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -86,9 +86,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuSeparator8 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator5 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.lbID = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.dtpDataAtualCadastro = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.btnSalvarAlteracaoServico = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
@@ -113,6 +110,9 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtDefeito = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtServicoFeito = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtSenha = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.dtpDataAtualCadastro = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -512,7 +512,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // pctHome
             // 
             this.pctHome.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pctHome.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_editar_100;
+            this.pctHome.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_alterar_100__1_;
             this.pctHome.Location = new System.Drawing.Point(209, 14);
             this.pctHome.Name = "pctHome";
             this.pctHome.Size = new System.Drawing.Size(33, 31);
@@ -531,9 +531,9 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.lblHome.Location = new System.Drawing.Point(262, 24);
             this.lblHome.Name = "lblHome";
             this.lblHome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblHome.Size = new System.Drawing.Size(87, 15);
+            this.lblHome.Size = new System.Drawing.Size(96, 15);
             this.lblHome.TabIndex = 97;
-            this.lblHome.Text = "EDITAR DADOS";
+            this.lblHome.Text = "ALTERAR DADOS";
             this.lblHome.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblHome.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -629,66 +629,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.lbID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lbID.Visible = false;
             // 
-            // bunifuLabel7
-            // 
-            this.bunifuLabel7.AllowParentOverrides = false;
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.BackColor = System.Drawing.Color.White;
-            this.bunifuLabel7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuLabel7.Location = new System.Drawing.Point(57, 98);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(14, 15);
-            this.bunifuLabel7.TabIndex = 100001;
-            this.bunifuLabel7.Text = "R$";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel10
-            // 
-            this.bunifuLabel10.AllowParentOverrides = false;
-            this.bunifuLabel10.AutoEllipsis = false;
-            this.bunifuLabel10.BackColor = System.Drawing.Color.White;
-            this.bunifuLabel10.CursorType = null;
-            this.bunifuLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel10.ForeColor = System.Drawing.Color.Black;
-            this.bunifuLabel10.Location = new System.Drawing.Point(214, 98);
-            this.bunifuLabel10.Name = "bunifuLabel10";
-            this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel10.Size = new System.Drawing.Size(14, 15);
-            this.bunifuLabel10.TabIndex = 100002;
-            this.bunifuLabel10.Text = "R$";
-            this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // dtpDataAtualCadastro
-            // 
-            this.dtpDataAtualCadastro.BackColor = System.Drawing.Color.Transparent;
-            this.dtpDataAtualCadastro.BorderRadius = 1;
-            this.dtpDataAtualCadastro.Color = System.Drawing.Color.Transparent;
-            this.dtpDataAtualCadastro.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.dtpDataAtualCadastro.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dtpDataAtualCadastro.DisabledColor = System.Drawing.Color.Gray;
-            this.dtpDataAtualCadastro.DisplayWeekNumbers = false;
-            this.dtpDataAtualCadastro.DPHeight = 0;
-            this.dtpDataAtualCadastro.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpDataAtualCadastro.FillDatePicker = false;
-            this.dtpDataAtualCadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataAtualCadastro.ForeColor = System.Drawing.Color.White;
-            this.dtpDataAtualCadastro.Icon = ((System.Drawing.Image)(resources.GetObject("dtpDataAtualCadastro.Icon")));
-            this.dtpDataAtualCadastro.IconColor = System.Drawing.Color.Black;
-            this.dtpDataAtualCadastro.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtpDataAtualCadastro.LeftTextMargin = 5;
-            this.dtpDataAtualCadastro.Location = new System.Drawing.Point(383, 85);
-            this.dtpDataAtualCadastro.MinimumSize = new System.Drawing.Size(4, 32);
-            this.dtpDataAtualCadastro.Name = "dtpDataAtualCadastro";
-            this.dtpDataAtualCadastro.Size = new System.Drawing.Size(168, 32);
-            this.dtpDataAtualCadastro.TabIndex = 100000;
-            this.dtpDataAtualCadastro.Value = new System.DateTime(2022, 6, 18, 0, 0, 0, 0);
-            // 
             // btnSalvarAlteracaoServico
             // 
             this.btnSalvarAlteracaoServico.AllowAnimations = true;
@@ -736,7 +676,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.btnSalvarAlteracaoServico.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSalvarAlteracaoServico.IdleIconLeftImage")));
             this.btnSalvarAlteracaoServico.IdleIconRightImage = null;
             this.btnSalvarAlteracaoServico.IndicateFocus = false;
-            this.btnSalvarAlteracaoServico.Location = new System.Drawing.Point(234, 455);
+            this.btnSalvarAlteracaoServico.Location = new System.Drawing.Point(236, 465);
             this.btnSalvarAlteracaoServico.Name = "btnSalvarAlteracaoServico";
             this.btnSalvarAlteracaoServico.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSalvarAlteracaoServico.OnDisabledState.BorderRadius = 1;
@@ -1569,6 +1509,64 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtSenha.UseSystemPasswordChar = false;
             this.txtSenha.WordWrap = true;
             this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
+            // 
+            // dtpDataAtualCadastro
+            // 
+            this.dtpDataAtualCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.dtpDataAtualCadastro.BorderRadius = 1;
+            this.dtpDataAtualCadastro.Color = System.Drawing.Color.Transparent;
+            this.dtpDataAtualCadastro.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dtpDataAtualCadastro.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtpDataAtualCadastro.DisabledColor = System.Drawing.Color.Gray;
+            this.dtpDataAtualCadastro.DisplayWeekNumbers = false;
+            this.dtpDataAtualCadastro.DPHeight = 0;
+            this.dtpDataAtualCadastro.FillDatePicker = false;
+            this.dtpDataAtualCadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataAtualCadastro.ForeColor = System.Drawing.Color.White;
+            this.dtpDataAtualCadastro.Icon = ((System.Drawing.Image)(resources.GetObject("dtpDataAtualCadastro.Icon")));
+            this.dtpDataAtualCadastro.IconColor = System.Drawing.Color.Black;
+            this.dtpDataAtualCadastro.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtpDataAtualCadastro.LeftTextMargin = 5;
+            this.dtpDataAtualCadastro.Location = new System.Drawing.Point(383, 85);
+            this.dtpDataAtualCadastro.MinimumSize = new System.Drawing.Size(0, 32);
+            this.dtpDataAtualCadastro.Name = "dtpDataAtualCadastro";
+            this.dtpDataAtualCadastro.Size = new System.Drawing.Size(168, 32);
+            this.dtpDataAtualCadastro.TabIndex = 100000;
+            this.dtpDataAtualCadastro.Value = new System.DateTime(2022, 6, 18, 0, 0, 0, 0);
+            // 
+            // bunifuLabel7
+            // 
+            this.bunifuLabel7.AllowParentOverrides = false;
+            this.bunifuLabel7.AutoEllipsis = false;
+            this.bunifuLabel7.BackColor = System.Drawing.Color.White;
+            this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel7.ForeColor = System.Drawing.Color.Black;
+            this.bunifuLabel7.Location = new System.Drawing.Point(57, 98);
+            this.bunifuLabel7.Name = "bunifuLabel7";
+            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel7.Size = new System.Drawing.Size(14, 15);
+            this.bunifuLabel7.TabIndex = 100001;
+            this.bunifuLabel7.Text = "R$";
+            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel10
+            // 
+            this.bunifuLabel10.AllowParentOverrides = false;
+            this.bunifuLabel10.AutoEllipsis = false;
+            this.bunifuLabel10.BackColor = System.Drawing.Color.White;
+            this.bunifuLabel10.CursorType = null;
+            this.bunifuLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel10.ForeColor = System.Drawing.Color.Black;
+            this.bunifuLabel10.Location = new System.Drawing.Point(214, 98);
+            this.bunifuLabel10.Name = "bunifuLabel10";
+            this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel10.Size = new System.Drawing.Size(14, 15);
+            this.bunifuLabel10.TabIndex = 100002;
+            this.bunifuLabel10.Text = "R$";
+            this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // form_EditarServicos
             // 

@@ -16,40 +16,27 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
     public partial class form_EditarServicos : Form
     {
         private form_CadastrarServicos formCadastrarServicos;
-        private form_ServicosConcluidos formServicosConcluidos;
 
         public form_EditarServicos(form_CadastrarServicos _formCadastrarServicos)
         {
             InitializeComponent();
-            InicializarBancoGlobal();
+            InicilizarBancoGlobal();
             formCadastrarServicos = _formCadastrarServicos;
-
-        }
-        public form_EditarServicos(form_ServicosConcluidos _formServicosConcluidos)
-        {
-            InitializeComponent();
-            InicializarBancoGlobal();
-            formServicosConcluidos = _formServicosConcluidos;
-
         }
 
-
-        private void InicializarBancoGlobal()
+        private void InicilizarBancoGlobal()
         {
             BancoGlobal.IniciarTabelaCadastroServicos();
         }
 
         private Decimal CalcularLucro()
         {
-
             decimal valorPeca = 0;
             decimal valorServico = 0;
-            char[] caracteres = { 'R', '$' };
-
+            char[] caracteres = { 'R', '$' }; //#1 caracteresParaRemover
 
             if (txtvalorPeca.Text != "")
             {
-
                 valorPeca = Convert.ToDecimal(txtvalorPeca.Text.TrimStart(caracteres));
             }
 
@@ -58,16 +45,13 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                 valorServico = Convert.ToDecimal(txtvalorServico.Text.TrimStart(caracteres));
             }
 
-
             decimal lucro = valorServico - valorPeca;
 
             return lucro;
-
         }
 
-        private void SalvarAlteracaoServico()
+        private void MetodoSalvarAlteracaoServico()
         {
-
             if (txtAcessorios.Text.Length <= 0 || txtvalorServico.Text.Length <= 0 || txtAparelho.Text.Length <= 0 || txtDefeito.Text.Length <= 0 || txtSenha.Text.Length <= 0 || txtSituacao.Text.Length <= 0 || txtvalorPeca.Text.Length <= 0 ||
                 txtServicoFeito.Text.Length <= 0)
             {
@@ -77,11 +61,10 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
             foreach (CadastroServicoEstrutura servico in BancoGlobal.listaCadastrosServicosEstrutura)
             {
-
                 if (servico.sv_id == Convert.ToInt32(lbID.Text))
                 {
                     Decimal lucro = CalcularLucro();
-                    char[] caracteres = { 'R', '$' };
+                    char[] caracteres = { 'R', '$' };//#2 caracteresParaRemover
 
                     servico.sv_aparelho = txtAparelho.Text;
                     servico.sv_dataCadastro = dtpDataAtualCadastro.Value;
@@ -94,20 +77,11 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                     servico.sv_acessorios = txtAcessorios.Text;
                     servico.sv_lucroServico = lucro;
 
-                    if (formServicosConcluidos != null)
-                    {
-                        formServicosConcluidos.PreencherTabelaComDadosServicosConcluidos();
-
-                    }
-                    else if (formCadastrarServicos != null)
-                    {
-                        formCadastrarServicos.PreencherTabelaComDadosServicosAndamentos();
-                    }
+                    formCadastrarServicos.PreencherTabelaComDadosServicos();
 
                     MessageBox.Show("Dados alterados com Sucesso!", "SUCESSO", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     break;
-
                 }
             }
 
@@ -116,9 +90,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void btnSalvarAlteracaoServico_Click(object sender, EventArgs e)
         {
-            pctHome.Image = Resources.icons8_alterar_100__1_;
-            lblHome.Text = "ALTERAR DADOS";
-            SalvarAlteracaoServico();
+            MetodoSalvarAlteracaoServico();
         }
 
         private void btnFecharJanela_Click(object sender, EventArgs e)
@@ -169,12 +141,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         private void txtSituacao_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDigitos.ApenasSpaceLetrasNumerosBackspace(e);
-        }
-
-        private void btnConcluirAbrirGarantia_Click(object sender, EventArgs e)
-        {
-            pctHome.Image = Resources.icons8_garantia_100;
-            lblHome.Text = "EMITIR GARANTIA";
         }
     }
 }
