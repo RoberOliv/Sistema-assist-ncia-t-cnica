@@ -16,42 +16,58 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
     public partial class form_EditarServicos : Form
     {
         private form_CadastrarServicos formCadastrarServicos;
+        private form_ServicosConcluidos formServicosConcluidos;
 
         public form_EditarServicos(form_CadastrarServicos _formCadastrarServicos)
         {
             InitializeComponent();
-            InicilizarBancoGlobal();
+            InicializarBancoGlobal();
             formCadastrarServicos = _formCadastrarServicos;
+
+        }
+        public form_EditarServicos(form_ServicosConcluidos _formServicosConcluidos)
+        {
+            InitializeComponent();
+            InicializarBancoGlobal();
+            formServicosConcluidos = _formServicosConcluidos;
+
         }
 
-        private void InicilizarBancoGlobal()
+
+        private void InicializarBancoGlobal()
         {
             BancoGlobal.IniciarTabelaCadastroServicos();
         }
 
         private Decimal CalcularLucro()
         {
+
             decimal valorPeca = 0;
             decimal valorServico = 0;
-            char[] caracteres = { 'R', '$' }; //#1 caracteresParaRemover
+            char[] caracteresParaRemover = { 'R', '$' };
+
 
             if (txtvalorPeca.Text != "")
             {
-                valorPeca = Convert.ToDecimal(txtvalorPeca.Text.TrimStart(caracteres));
+
+                valorPeca = Convert.ToDecimal(txtvalorPeca.Text.TrimStart(caracteresParaRemover));
             }
 
             if (txtvalorServico.Text != "")
             {
-                valorServico = Convert.ToDecimal(txtvalorServico.Text.TrimStart(caracteres));
+                valorServico = Convert.ToDecimal(txtvalorServico.Text.TrimStart(caracteresParaRemover));
             }
+
 
             decimal lucro = valorServico - valorPeca;
 
             return lucro;
+
         }
 
-        private void MetodoSalvarAlteracaoServico()
+        private void SalvarAlteracaoServico()
         {
+
             if (txtAcessorios.Text.Length <= 0 || txtvalorServico.Text.Length <= 0 || txtAparelho.Text.Length <= 0 || txtDefeito.Text.Length <= 0 || txtSenha.Text.Length <= 0 || txtSituacao.Text.Length <= 0 || txtvalorPeca.Text.Length <= 0 ||
                 txtServicoFeito.Text.Length <= 0)
             {
@@ -61,27 +77,37 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
             foreach (CadastroServicoEstrutura servico in BancoGlobal.listaCadastrosServicosEstrutura)
             {
+
                 if (servico.sv_id == Convert.ToInt32(lbID.Text))
                 {
                     Decimal lucro = CalcularLucro();
-                    char[] caracteres = { 'R', '$' };//#2 caracteresParaRemover
+                    char[] caracteresParaRemover = { 'R', '$' };
 
                     servico.sv_aparelho = txtAparelho.Text;
                     servico.sv_dataCadastro = dtpDataAtualCadastro.Value;
                     servico.sv_defeito = txtDefeito.Text;
                     servico.sv_senha = txtSenha.Text;
-                    servico.sv_valorServico = Convert.ToDecimal(txtvalorServico.Text.TrimStart(caracteres) == "" ? "0" : txtvalorServico.Text.TrimStart(caracteres));
-                    servico.sv_valorPeca = Convert.ToDecimal(txtvalorPeca.Text.TrimStart(caracteres) == "" ? "0" : txtvalorPeca.Text.TrimStart(caracteres));
+                    servico.sv_valorServico = Convert.ToDecimal(txtvalorServico.Text.TrimStart(caracteresParaRemover) == "" ? "0" : txtvalorServico.Text.TrimStart(caracteresParaRemover));
+                    servico.sv_valorPeca = Convert.ToDecimal(txtvalorPeca.Text.TrimStart(caracteresParaRemover) == "" ? "0" : txtvalorPeca.Text.TrimStart(caracteresParaRemover));
                     servico.sv_servicoFeito = txtServicoFeito.Text;
                     servico.sv_situacao = txtSituacao.Text;
                     servico.sv_acessorios = txtAcessorios.Text;
                     servico.sv_lucroServico = lucro;
 
-                    formCadastrarServicos.PreencherTabelaComDadosServicos();
+                    if (formServicosConcluidos != null)
+                    {
+                        formServicosConcluidos.PreencherTabelaComDadosServicosConcluidos();
+
+                    }
+                    else if (formCadastrarServicos != null)
+                    {
+                        formCadastrarServicos.PreencherTabelaComDadosServicosAndamentos();
+                    }
 
                     MessageBox.Show("Dados alterados com Sucesso!", "SUCESSO", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     break;
+
                 }
             }
 
@@ -90,7 +116,9 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void btnSalvarAlteracaoServico_Click(object sender, EventArgs e)
         {
-            MetodoSalvarAlteracaoServico();
+            pctHome.Image = Resources.icons8_alterar_100__1_;
+            lblHome.Text = "ALTERAR DADOS";
+            SalvarAlteracaoServico();
         }
 
         private void btnFecharJanela_Click(object sender, EventArgs e)
@@ -142,5 +170,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             ValidarDigitos.ApenasSpaceLetrasNumerosBackspace(e);
         }
+
     }
 }

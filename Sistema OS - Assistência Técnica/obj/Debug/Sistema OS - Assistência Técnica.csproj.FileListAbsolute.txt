@@ -25,3 +25,8 @@ C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assi
 C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_EditarServicos.resources
 C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
 C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_EditarCadastrosClientes.resources
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_ServicosConcluidos.resources
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_GarantiaServicosConcluidos.resources
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CalcularDataGarantia.resources
