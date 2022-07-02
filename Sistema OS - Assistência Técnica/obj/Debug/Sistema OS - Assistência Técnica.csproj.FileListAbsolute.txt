@@ -30,3 +30,51 @@ C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assi
 C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_ServicosConcluidos.resources
 C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_GarantiaServicosConcluidos.resources
 C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CalcularDataGarantia.resources
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_VerGarantia.resources
+C:\Users\robin\source\repos\Sistema OS - Assistência Técnica\Sistema OS - Assistência Técnica\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.dll
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.exe.config
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.exe
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.pdb
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe.config
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CadastrarClientes.resources
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CadastrarServicos.resources
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CalcularDataGarantia.resources
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_EditarServicos.resources
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_EditarCadastrosClientes.resources
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_GarantiaServicosConcluidos.resources
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica.form_ModuloServicoAndamento.resources
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_ServicosConcluidos.resources
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_VerGarantia.resources
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica.Properties.Resources.resources
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.GenerateResource.cache
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe.licenses
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.CoreCompileInputs.cache
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.CopyComplete
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe
+G:\Meu Drive\@Projetinho dos CRIA\2 - Modulo de Clientes e Servico Concluidos\2 - Robinho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.pdb
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.exe.config
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.exe
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\bin\Debug\Sistema OS - Assistência Técnica.pdb
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.AssemblyReference.cache
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe.config
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CadastrarClientes.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CadastrarServicos.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_CalcularDataGarantia.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_EditarServicos.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_EditarCadastrosClientes.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_GarantiaServicosConcluidos.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica.form_ModuloServicoAndamento.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_ServicosConcluidos.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_VerGarantia.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica.Properties.Resources.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.GenerateResource.cache
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe.licenses
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.CoreCompileInputs.cache
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.csproj.CopyComplete
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.exe
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema OS - Assistência Técnica.pdb
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_ClientesComMaisServicos.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_MaioresLucros.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_LucrosGastos.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_MaioresPrejuizos.resources
+C:\Users\robin\OneDrive\Área de Trabalho\Sistema OS - Assistência Técnica\obj\Debug\Sistema_OS___Assistência_Técnica._3___Forms.form_Financeiro.resources

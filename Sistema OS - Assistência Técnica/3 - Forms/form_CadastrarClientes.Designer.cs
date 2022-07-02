@@ -150,14 +150,14 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.gdv_CadastroClientes.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(214)))), ((int)(((byte)(194)))));
             this.gdv_CadastroClientes.HeaderBgColor = System.Drawing.Color.Empty;
             this.gdv_CadastroClientes.HeaderForeColor = System.Drawing.Color.White;
-            this.gdv_CadastroClientes.Location = new System.Drawing.Point(5, 222);
+            this.gdv_CadastroClientes.Location = new System.Drawing.Point(5, 190);
             this.gdv_CadastroClientes.Name = "gdv_CadastroClientes";
             this.gdv_CadastroClientes.RowHeadersVisible = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.gdv_CadastroClientes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gdv_CadastroClientes.RowTemplate.Height = 40;
             this.gdv_CadastroClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gdv_CadastroClientes.Size = new System.Drawing.Size(1161, 283);
+            this.gdv_CadastroClientes.Size = new System.Drawing.Size(1161, 315);
             this.gdv_CadastroClientes.TabIndex = 99999;
             this.gdv_CadastroClientes.TabStop = false;
             this.gdv_CadastroClientes.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
@@ -206,7 +206,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel9.AutoEllipsis = false;
             this.bunifuLabel9.CursorType = null;
             this.bunifuLabel9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel9.Location = new System.Drawing.Point(820, 55);
+            this.bunifuLabel9.Location = new System.Drawing.Point(822, 55);
             this.bunifuLabel9.Name = "bunifuLabel9";
             this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel9.Size = new System.Drawing.Size(69, 15);
@@ -236,7 +236,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel3.Location = new System.Drawing.Point(300, 56);
+            this.bunifuLabel3.Location = new System.Drawing.Point(299, 56);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(55, 15);
@@ -252,7 +252,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel2.Location = new System.Drawing.Point(41, 58);
+            this.bunifuLabel2.Location = new System.Drawing.Point(43, 56);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(45, 15);
@@ -268,7 +268,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel14.CursorType = null;
             this.bunifuLabel14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel14.ForeColor = System.Drawing.Color.Red;
-            this.bunifuLabel14.Location = new System.Drawing.Point(540, 22);
+            this.bunifuLabel14.Location = new System.Drawing.Point(539, 22);
             this.bunifuLabel14.Name = "bunifuLabel14";
             this.bunifuLabel14.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel14.Size = new System.Drawing.Size(7, 21);
@@ -283,7 +283,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(950, 143);
+            this.bunifuLabel1.Location = new System.Drawing.Point(950, 111);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(0, 0);
@@ -297,7 +297,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel4.Location = new System.Drawing.Point(1071, 140);
+            this.bunifuLabel4.Location = new System.Drawing.Point(1071, 108);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(20, 15);
@@ -312,7 +312,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel5.AutoEllipsis = false;
             this.bunifuLabel5.CursorType = null;
             this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel5.Location = new System.Drawing.Point(950, 141);
+            this.bunifuLabel5.Location = new System.Drawing.Point(950, 109);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel5.Size = new System.Drawing.Size(45, 15);
@@ -339,7 +339,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.chkDocumentoCPF.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.chkDocumentoCPF.Cursor = System.Windows.Forms.Cursors.Default;
             this.chkDocumentoCPF.CustomCheckmarkImage = null;
-            this.chkDocumentoCPF.Location = new System.Drawing.Point(1044, 137);
+            this.chkDocumentoCPF.Location = new System.Drawing.Point(1044, 105);
             this.chkDocumentoCPF.MinimumSize = new System.Drawing.Size(17, 17);
             this.chkDocumentoCPF.Name = "chkDocumentoCPF";
             this.chkDocumentoCPF.OnCheck.BorderColor = System.Drawing.Color.Lime;
@@ -393,7 +393,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.chkNomeCliente.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.chkNomeCliente.Cursor = System.Windows.Forms.Cursors.Default;
             this.chkNomeCliente.CustomCheckmarkImage = null;
-            this.chkNomeCliente.Location = new System.Drawing.Point(923, 137);
+            this.chkNomeCliente.Location = new System.Drawing.Point(923, 105);
             this.chkNomeCliente.MinimumSize = new System.Drawing.Size(17, 17);
             this.chkNomeCliente.Name = "chkNomeCliente";
             this.chkNomeCliente.OnCheck.BorderColor = System.Drawing.Color.Lime;
@@ -522,7 +522,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_e_mail_para_celular_100;
-            this.pictureBox5.Location = new System.Drawing.Point(903, 50);
+            this.pictureBox5.Location = new System.Drawing.Point(894, 50);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(36, 26);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -542,7 +542,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_gestão_de_cliente_100;
-            this.pictureBox3.Location = new System.Drawing.Point(93, 50);
+            this.pictureBox3.Location = new System.Drawing.Point(91, 50);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(36, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -552,7 +552,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_telefone_celular_100;
-            this.pictureBox2.Location = new System.Drawing.Point(358, 50);
+            this.pictureBox2.Location = new System.Drawing.Point(357, 50);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -618,7 +618,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtDocumentoCPF.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDocumentoCPF.Lines = new string[] {
         "Digite o CPF"};
-            this.txtDocumentoCPF.Location = new System.Drawing.Point(532, 11);
+            this.txtDocumentoCPF.Location = new System.Drawing.Point(536, 11);
             this.txtDocumentoCPF.MaxLength = 14;
             this.txtDocumentoCPF.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDocumentoCPF.Modified = false;
@@ -806,7 +806,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtNumeroTelefone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNumeroTelefone.Lines = new string[] {
         "Número"};
-            this.txtNumeroTelefone.Location = new System.Drawing.Point(252, 11);
+            this.txtNumeroTelefone.Location = new System.Drawing.Point(253, 11);
             this.txtNumeroTelefone.MaxLength = 13;
             this.txtNumeroTelefone.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNumeroTelefone.Modified = false;
@@ -885,7 +885,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtTelefoneRecado.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefoneRecado.Lines = new string[] {
         "Número"};
-            this.txtTelefoneRecado.Location = new System.Drawing.Point(773, 12);
+            this.txtTelefoneRecado.Location = new System.Drawing.Point(771, 12);
             this.txtTelefoneRecado.MaxLength = 13;
             this.txtTelefoneRecado.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefoneRecado.Modified = false;
@@ -964,7 +964,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtBuscarClienteNomeEDocumento.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscarClienteNomeEDocumento.Lines = new string[] {
         "Campo de busca"};
-            this.txtBuscarClienteNomeEDocumento.Location = new System.Drawing.Point(12, 164);
+            this.txtBuscarClienteNomeEDocumento.Location = new System.Drawing.Point(12, 132);
             this.txtBuscarClienteNomeEDocumento.MaxLength = 30;
             this.txtBuscarClienteNomeEDocumento.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBuscarClienteNomeEDocumento.Modified = false;
@@ -1062,7 +1062,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.btnBuscarClienteNomeEDocumento.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarClienteNomeEDocumento.IdleIconLeftImage")));
             this.btnBuscarClienteNomeEDocumento.IdleIconRightImage = null;
             this.btnBuscarClienteNomeEDocumento.IndicateFocus = false;
-            this.btnBuscarClienteNomeEDocumento.Location = new System.Drawing.Point(1103, 164);
+            this.btnBuscarClienteNomeEDocumento.Location = new System.Drawing.Point(1103, 132);
             this.btnBuscarClienteNomeEDocumento.Name = "btnBuscarClienteNomeEDocumento";
             this.btnBuscarClienteNomeEDocumento.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnBuscarClienteNomeEDocumento.OnDisabledState.BorderRadius = 1;
@@ -1179,10 +1179,10 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         private System.Windows.Forms.ContextMenuStrip context;
         private System.Windows.Forms.ToolStripMenuItem contextEditarCliente;
         private System.Windows.Forms.ToolStripMenuItem contextDeletarCliente;
-        private Bunifu.UI.WinForms.BunifuDataGridView gdv_CadastroClientes;
         public Bunifu.UI.WinForms.BunifuTextBox txtDocumentoCPF;
         public Bunifu.UI.WinForms.BunifuTextBox txtNomeCliente;
         public Bunifu.UI.WinForms.BunifuTextBox txtNumeroTelefone;
         public Bunifu.UI.WinForms.BunifuTextBox txtTelefoneRecado;
+        public Bunifu.UI.WinForms.BunifuDataGridView gdv_CadastroClientes;
     }
 }

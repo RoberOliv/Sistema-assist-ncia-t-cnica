@@ -16,7 +16,9 @@ namespace Sistema_OS___Assistência_Técnica
 {
     public partial class form_ModuloServicoAndamento : Form
     {
-        
+
+        private form_CadastrarClientes currentForm;
+
         public form_ModuloServicoAndamento()
         {
             InitializeComponent();
@@ -67,5 +69,14 @@ namespace Sistema_OS___Assistência_Técnica
             lblHome.Text = "SERVIÇOS CONCLUÍDOS";
             showChildForminPanel(new form_ServicosConcluidos(this));
         }
+
+        private void btnLucrosPrejuizos_Click(object sender, EventArgs e)
+        {
+            pctHome.Image = Resources.icons8_profits_100;
+            lblHome.Text = "FINANCEIRO";
+            showChildForminPanel(new form_Financeiro());
+        }
+
     }
 }
+

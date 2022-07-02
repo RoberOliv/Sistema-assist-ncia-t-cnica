@@ -42,9 +42,9 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.gdv_CadastroServicosConcluidos = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.context = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextNãoConcluidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextVerGarantiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextEditarServico = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextServicoNaoConcluido = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextVerGarantia = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextEditarServicoConcluido = new System.Windows.Forms.ToolStripMenuItem();
             this.txtBuscarServicoAparelho = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnBuscarServicos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_CadastroServicosConcluidos)).BeginInit();
@@ -54,6 +54,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // gdv_CadastroServicosConcluidos
             // 
             this.gdv_CadastroServicosConcluidos.AllowCustomTheming = true;
+            this.gdv_CadastroServicosConcluidos.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
@@ -121,32 +122,32 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // context
             // 
             this.context.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contextNãoConcluidoToolStripMenuItem,
-            this.contextVerGarantiaToolStripMenuItem,
-            this.contextEditarServico});
+            this.contextServicoNaoConcluido,
+            this.contextVerGarantia,
+            this.contextEditarServicoConcluido});
             this.context.Name = "context";
-            this.context.Size = new System.Drawing.Size(155, 70);
+            this.context.Size = new System.Drawing.Size(181, 92);
             // 
-            // contextNãoConcluidoToolStripMenuItem
+            // contextServicoNaoConcluido
             // 
-            this.contextNãoConcluidoToolStripMenuItem.Name = "contextNãoConcluidoToolStripMenuItem";
-            this.contextNãoConcluidoToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.contextNãoConcluidoToolStripMenuItem.Text = "Não Concluido";
-            this.contextNãoConcluidoToolStripMenuItem.Click += new System.EventHandler(this.contextNãoConcluidoToolStripMenuItem_Click);
+            this.contextServicoNaoConcluido.Name = "contextServicoNaoConcluido";
+            this.contextServicoNaoConcluido.Size = new System.Drawing.Size(180, 22);
+            this.contextServicoNaoConcluido.Text = "Não Concluido";
+            this.contextServicoNaoConcluido.Click += new System.EventHandler(this.contextNãoConcluidoToolStripMenuItem_Click);
             // 
-            // contextVerGarantiaToolStripMenuItem
+            // contextVerGarantia
             // 
-            this.contextVerGarantiaToolStripMenuItem.Name = "contextVerGarantiaToolStripMenuItem";
-            this.contextVerGarantiaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.contextVerGarantiaToolStripMenuItem.Text = "Ver Garantia";
-            this.contextVerGarantiaToolStripMenuItem.Click += new System.EventHandler(this.contextVerGarantiaToolStripMenuItem_Click);
+            this.contextVerGarantia.Name = "contextVerGarantia";
+            this.contextVerGarantia.Size = new System.Drawing.Size(180, 22);
+            this.contextVerGarantia.Text = "Ver Garantia";
+            this.contextVerGarantia.Click += new System.EventHandler(this.contextVerGarantiaToolStripMenuItem_Click);
             // 
-            // contextEditarServico
+            // contextEditarServicoConcluido
             // 
-            this.contextEditarServico.Name = "contextEditarServico";
-            this.contextEditarServico.Size = new System.Drawing.Size(154, 22);
-            this.contextEditarServico.Text = "Editar";
-            this.contextEditarServico.Click += new System.EventHandler(this.contextEditarServico_Click);
+            this.contextEditarServicoConcluido.Name = "contextEditarServicoConcluido";
+            this.contextEditarServicoConcluido.Size = new System.Drawing.Size(180, 22);
+            this.contextEditarServicoConcluido.Text = "Editar";
+            this.contextEditarServicoConcluido.Click += new System.EventHandler(this.contextEditarServico_Click);
             // 
             // txtBuscarServicoAparelho
             // 
@@ -341,9 +342,9 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         private Bunifu.UI.WinForms.BunifuTextBox txtBuscarServicoAparelho;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnBuscarServicos;
         private System.Windows.Forms.ContextMenuStrip context;
-        private System.Windows.Forms.ToolStripMenuItem contextNãoConcluidoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contextVerGarantiaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contextEditarServico;
+        private System.Windows.Forms.ToolStripMenuItem contextServicoNaoConcluido;
+        private System.Windows.Forms.ToolStripMenuItem contextVerGarantia;
+        private System.Windows.Forms.ToolStripMenuItem contextEditarServicoConcluido;
         public Bunifu.UI.WinForms.BunifuDataGridView gdv_CadastroServicosConcluidos;
     }
 }

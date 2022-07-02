@@ -63,6 +63,86 @@ namespace Sistema_OS___Assistência_Técnica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1623804836861_manutencao {
+            get {
+                object obj = ResourceManager.GetObject("1623804836861-manutencao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1623804836861_manutencao_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("1623804836861-manutencao-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _326_3264960_itouch_curitiba_assistncia_tcnica_de_celulares_em_android {
+            get {
+                object obj = ResourceManager.GetObject("326-3264960_itouch-curitiba-assistncia-tcnica-de-celulares-em-android", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assistencia {
+            get {
+                object obj = ResourceManager.GetObject("assistencia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assistencia_tecnica {
+            get {
+                object obj = ResourceManager.GetObject("assistencia-tecnica", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Assistência_Técnica_Mairless_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Assistência-Técnica-Mairless-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap db54af_7c5a92c9b9234c1c90b5b98009617338_mv2_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("db54af_7c5a92c9b9234c1c90b5b98009617338_mv2-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_à_esquerda_dentro_de_um_círculo_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-à-esquerda-dentro-de-um-círculo-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_adicionar_regra_100__3_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-adicionar-regra-100 (3)", resourceCulture);
@@ -223,6 +303,16 @@ namespace Sistema_OS___Assistência_Técnica.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_profits_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-profits-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_selecionado_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-selecionado-100", resourceCulture);
@@ -286,6 +376,46 @@ namespace Sistema_OS___Assistência_Técnica.Properties {
         internal static System.Drawing.Bitmap icons8_vassoura_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-vassoura-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_como_funciona_a_assistencia_tecnica_para_aparelhos_de_pesagens {
+            get {
+                object obj = ResourceManager.GetObject("img-como-funciona-a-assistencia-tecnica-para-aparelhos-de-pesagens", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transferir {
+            get {
+                object obj = ResourceManager.GetObject("transferir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transferir__1_ {
+            get {
+                object obj = ResourceManager.GetObject("transferir (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

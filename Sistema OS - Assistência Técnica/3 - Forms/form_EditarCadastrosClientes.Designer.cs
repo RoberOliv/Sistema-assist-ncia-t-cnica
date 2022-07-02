@@ -99,7 +99,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel14.CursorType = null;
             this.bunifuLabel14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel14.ForeColor = System.Drawing.Color.Red;
-            this.bunifuLabel14.Location = new System.Drawing.Point(186, 80);
+            this.bunifuLabel14.Location = new System.Drawing.Point(186, 103);
             this.bunifuLabel14.Name = "bunifuLabel14";
             this.bunifuLabel14.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel14.Size = new System.Drawing.Size(7, 21);
@@ -130,7 +130,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel9.AutoEllipsis = false;
             this.bunifuLabel9.CursorType = null;
             this.bunifuLabel9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel9.Location = new System.Drawing.Point(215, 232);
+            this.bunifuLabel9.Location = new System.Drawing.Point(215, 255);
             this.bunifuLabel9.Name = "bunifuLabel9";
             this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel9.Size = new System.Drawing.Size(69, 15);
@@ -145,7 +145,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel6.AutoEllipsis = false;
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel6.Location = new System.Drawing.Point(208, 112);
+            this.bunifuLabel6.Location = new System.Drawing.Point(208, 135);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel6.Size = new System.Drawing.Size(76, 15);
@@ -160,7 +160,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel3.Location = new System.Drawing.Point(37, 233);
+            this.bunifuLabel3.Location = new System.Drawing.Point(37, 256);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(55, 15);
@@ -192,7 +192,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.Red;
-            this.bunifuLabel1.Location = new System.Drawing.Point(12, 82);
+            this.bunifuLabel1.Location = new System.Drawing.Point(12, 107);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(7, 21);
@@ -208,7 +208,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel4.Location = new System.Drawing.Point(42, 117);
+            this.bunifuLabel4.Location = new System.Drawing.Point(42, 142);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(45, 15);
@@ -633,7 +633,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_gestão_de_cliente_100;
-            this.pictureBox1.Location = new System.Drawing.Point(94, 109);
+            this.pictureBox1.Location = new System.Drawing.Point(94, 132);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -649,7 +649,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator1.LineThickness = 2;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(13, 99);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(13, 122);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(150, 10);
@@ -683,7 +683,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtNomeCliente.IconRight = null;
             this.txtNomeCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNomeCliente.Lines = new string[0];
-            this.txtNomeCliente.Location = new System.Drawing.Point(12, 71);
+            this.txtNomeCliente.Location = new System.Drawing.Point(12, 94);
             this.txtNomeCliente.MaxLength = 20;
             this.txtNomeCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNomeCliente.Modified = false;
@@ -734,7 +734,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_e_mail_para_celular_100;
-            this.pictureBox5.Location = new System.Drawing.Point(290, 228);
+            this.pictureBox5.Location = new System.Drawing.Point(290, 251);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(36, 26);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -744,7 +744,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_card_100;
-            this.pictureBox4.Location = new System.Drawing.Point(286, 108);
+            this.pictureBox4.Location = new System.Drawing.Point(286, 131);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(36, 26);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -764,7 +764,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_telefone_celular_100;
-            this.pictureBox2.Location = new System.Drawing.Point(95, 227);
+            this.pictureBox2.Location = new System.Drawing.Point(95, 250);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -780,7 +780,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuSeparator7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuSeparator7.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator7.LineThickness = 2;
-            this.bunifuSeparator7.Location = new System.Drawing.Point(183, 98);
+            this.bunifuSeparator7.Location = new System.Drawing.Point(183, 121);
             this.bunifuSeparator7.Name = "bunifuSeparator7";
             this.bunifuSeparator7.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator7.Size = new System.Drawing.Size(161, 10);
@@ -795,7 +795,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuSeparator6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuSeparator6.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator6.LineThickness = 2;
-            this.bunifuSeparator6.Location = new System.Drawing.Point(183, 216);
+            this.bunifuSeparator6.Location = new System.Drawing.Point(183, 239);
             this.bunifuSeparator6.Name = "bunifuSeparator6";
             this.bunifuSeparator6.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator6.Size = new System.Drawing.Size(156, 10);
@@ -829,7 +829,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtDocumentoCPF.IconRight = null;
             this.txtDocumentoCPF.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDocumentoCPF.Lines = new string[0];
-            this.txtDocumentoCPF.Location = new System.Drawing.Point(187, 70);
+            this.txtDocumentoCPF.Location = new System.Drawing.Point(187, 93);
             this.txtDocumentoCPF.MaxLength = 50;
             this.txtDocumentoCPF.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDocumentoCPF.Modified = false;
@@ -901,7 +901,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuSeparator4.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator4.LineThickness = 2;
-            this.bunifuSeparator4.Location = new System.Drawing.Point(12, 216);
+            this.bunifuSeparator4.Location = new System.Drawing.Point(12, 239);
             this.bunifuSeparator4.Name = "bunifuSeparator4";
             this.bunifuSeparator4.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator4.Size = new System.Drawing.Size(151, 10);
@@ -935,7 +935,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtNumeroTelefone.IconRight = null;
             this.txtNumeroTelefone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNumeroTelefone.Lines = new string[0];
-            this.txtNumeroTelefone.Location = new System.Drawing.Point(12, 188);
+            this.txtNumeroTelefone.Location = new System.Drawing.Point(12, 211);
             this.txtNumeroTelefone.MaxLength = 50;
             this.txtNumeroTelefone.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNumeroTelefone.Modified = false;
@@ -1011,7 +1011,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtTelefoneRecado.IconRight = null;
             this.txtTelefoneRecado.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefoneRecado.Lines = new string[0];
-            this.txtTelefoneRecado.Location = new System.Drawing.Point(179, 182);
+            this.txtTelefoneRecado.Location = new System.Drawing.Point(179, 205);
             this.txtTelefoneRecado.MaxLength = 50;
             this.txtTelefoneRecado.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefoneRecado.Modified = false;

@@ -26,8 +26,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             InicializarBancoGlobal();
             PreencherTabelaComDadosClientes();
             formModuloServicoAndamento = _formModuloServicoAndamento;
-
-
         }
 
         private void InicializarBancoGlobal()
@@ -50,10 +48,11 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void AdicionarLinhaGridView(DataTable dt)
         {
-            foreach (CadastroClienteEstrutura cadastro in BancoGlobal.listaCadastrosClientesEstrutura)
+
+            foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
             {
-                dt.Rows.Add(cadastro.cl_id, cadastro.cl_nome, cadastro.cl_telefone, cadastro.cl_cpf,
-                    cadastro.cl_telefone_recado);
+                dt.Rows.Add(cliente.cl_id, cliente.cl_nome, cliente.cl_telefone, cliente.cl_cpf,
+                    cliente.cl_telefone_recado);
             }
         }
 
@@ -63,7 +62,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             AdicionarLinhaGridView(dt);
 
             gdv_CadastroClientes.DataSource = dt;
-
         }
 
         private void ClearTextBox()
@@ -81,36 +79,53 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             CadastrarClientes();
             PreencherTabelaComDadosClientes();
             gdv_CadastroClientes.ClearSelection();
-
         }
 
         private void CadastrarClientes()
         {
-            if (txtNomeCliente.Text.Length <= 0 || txtDocumentoCPF.Text.Length <= 0)
+            if (txtNomeCliente.Text == "Nome do cliente" || txtDocumentoCPF.Text == "Digite o CPF")
             {
-                MessageBox.Show("PREENCHA OS CAMPOS OBRIGATÓRIOS!", "Atenção", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                MessageBox.Show("FAVOR PREENCHER OS CAMPOS DE NOME E CPF!", "Atenção", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                return;
             }
-            else
+
+            if (txtNumeroTelefone.Text == "Número" || txtTelefoneRecado.Text == "Número")
             {
-
-                int novaID = BancoGlobal.listaCadastrosClientesEstrutura.Count;
-
-
-                BancoGlobal.listaCadastrosClientesEstrutura.Add(new CadastroClienteEstrutura(novaID + 1,
-                    txtNomeCliente.Text, txtNumeroTelefone.Text, txtDocumentoCPF.Text, txtTelefoneRecado.Text, true));
-
-                ClearTextBox();
-
-                MessageBox.Show("Serviço cadastrado com Sucesso!", "SUCESSO", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-
+                txtNumeroTelefone.Text = "";
+                txtTelefoneRecado.Text = "";
             }
+
+            if (txtNomeCliente.Text.Length <= 2 || txtDocumentoCPF.Text.Length < 14 || txtNumeroTelefone.Text.Length < 13 || txtTelefoneRecado.Text.Length < 13)
+            {
+                MessageBox.Show("EXISTEM CAMPOS  VAZIOS OU INCOMPLETOS!", "Atenção", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            int novaID = BancoGlobal.listaCadastrosClientesEstrutura.Count;
+
+            BancoGlobal.listaCadastrosClientesEstrutura.Add(new CadastroClienteEstrutura(novaID + 1,
+                txtNomeCliente.Text, txtNumeroTelefone.Text, txtDocumentoCPF.Text, txtTelefoneRecado.Text));
+
+            MessageBox.Show("Cliente cadastrado com Sucesso!", "SUCESSO", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+
+            ClearTextBox();
+            ResetarTextBox();
+
+        }
+
+        private void ResetarTextBox()
+        {
+            txtNomeCliente.Text = "Nome do cliente";
+            txtDocumentoCPF.Text = "Digite o CPF";
+            txtNumeroTelefone.Text = "Número";
+            txtTelefoneRecado.Text = "Número";
         }
 
         private void BuscarClienteNomeEDocumento()
         {
-
             formModuloServicoAndamento.pctHome.Image = Resources.icons8_pesquisar_100__1_;
             formModuloServicoAndamento.lblHome.Text = "BUSCAR CLIENTES";
 
@@ -126,14 +141,12 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
             else
             {
-
                 if (chkNomeCliente.Checked == true)
                 {
-
                     DataTable dt = CriarDataTableClientes();
                     foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
                     {
-                        if (cliente.cl_nome == txtBuscarClienteNomeEDocumento.Text)
+                        if (cliente.cl_nome.ToLower().Contains(txtBuscarClienteNomeEDocumento.Text.ToLower()))
                         {
                             dt.Rows.Add(cliente.cl_id, cliente.cl_nome, cliente.cl_cpf, cliente.cl_telefone,
                                 cliente.cl_telefone_recado);
@@ -142,19 +155,19 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                                 MessageBoxIcon.Information);
 
                             ClearTextBox();
+                            ResetarTextBox();
+                            break;
                         }
-                    }
 
+                    }
                     gdv_CadastroClientes.DataSource = dt;
                 }
-
-
                 else if (chkDocumentoCPF.Checked == true)
                 {
                     DataTable dt = CriarDataTableClientes();
                     foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
                     {
-                        if (cliente.cl_cpf == txtBuscarClienteNomeEDocumento.Text)
+                        if (cliente.cl_cpf.ToLower().Contains(txtBuscarClienteNomeEDocumento.Text.ToLower()))
                         {
                             dt.Rows.Add(cliente.cl_id, cliente.cl_nome, cliente.cl_cpf, cliente.cl_telefone,
                                 cliente.cl_telefone_recado);
@@ -163,10 +176,11 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                                 MessageBoxIcon.Information);
 
                             ClearTextBox();
+                            ResetarTextBox();
                             break;
                         }
-                    }
 
+                    }
                     gdv_CadastroClientes.DataSource = dt;
                 }
             }
@@ -180,18 +194,16 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void chkNomeCliente_Click(object sender, EventArgs e)
         {
-            if (chkNomeCliente.Checked == false && chkDocumentoCPF.Checked == false )
+
+            if (chkNomeCliente.Checked == false && chkDocumentoCPF.Checked == false)
             {
                 txtBuscarClienteNomeEDocumento.Text = "Campo de busca";
             }
-
-            if (chkNomeCliente.Checked == true)
+            else if (chkNomeCliente.Checked == true)
             {
                 txtBuscarClienteNomeEDocumento.Text = "Buscar nome do cliente";
                 chkDocumentoCPF.Checked = false;
-
             }
-
         }
 
         private void chkDocumentoCPF_Click(object sender, EventArgs e)
@@ -218,10 +230,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void SetarValoresTextBox()
         {
-
-
             int qtdDeLinhasSelecionadas = gdv_CadastroClientes.SelectedRows.Count;
-
 
             if (qtdDeLinhasSelecionadas == 0)
             {
@@ -239,9 +248,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                 form.txtTelefoneRecado.Text = gdv_CadastroClientes.SelectedCells[4].Value.ToString();
 
                 form.ShowDialog();
-
             }
-
         }
 
         private void contextEditarCliente_Click(object sender, EventArgs e)
@@ -249,21 +256,20 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             SetarValoresTextBox();
         }
 
-        private bool VerificarExistenciaCliente(int _idCliente)
+        private bool VerificarClientePossuiServicos(int _idCliente)
         {
             foreach (CadastroServicoEstrutura servico in BancoGlobal.listaCadastrosServicosEstrutura)
             {
                 if (servico.sv_fk_cl_idCliente == _idCliente)
                 {
                     return true;
-
                 }
             }
 
             return false;
         }
 
-        private void contextDeletarCliente_Click(object sender, EventArgs e)
+        private void DeletarCliente()
         {
             int qtdDeLinhasSelecionadas = gdv_CadastroClientes.SelectedRows.Count;
 
@@ -274,7 +280,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                 return;
             }
 
-            if (VerificarExistenciaCliente(Convert.ToInt32(gdv_CadastroClientes.SelectedCells[0].Value.ToString())) ==
+            if (VerificarClientePossuiServicos(Convert.ToInt32(gdv_CadastroClientes.SelectedCells[0].Value.ToString())) ==
                 true)
             {
                 MessageBox.Show("ESTE CLIENTE POSSUI SERVIÇO EM ANDAMENTO OU CONCLUIDO!", "ATENÇÃO",
@@ -287,7 +293,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
                 foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
                 {
-
                     if (cliente.cl_id == Convert.ToInt32(gdv_CadastroClientes.SelectedCells[0].Value.ToString()))
                     {
                         if (MessageBox.Show("TEM CERTEZA? ", "ATENÇÃO", MessageBoxButtons.YesNo,
@@ -296,69 +301,36 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                         {
                             BancoGlobal.listaCadastrosClientesEstrutura.Remove(cliente);
                             PreencherTabelaComDadosClientes();
-                            break;
 
                         }
-                        else
-                        {
-                            break;
-                        }
+
+                        break;
                     }
                 }
             }
-
         }
 
-        private void PadraoDocumentoCPFTextbox(object sender, KeyPressEventArgs e)
+        private void contextDeletarCliente_Click(object sender, EventArgs e)
         {
-            TextBox CPF = sender as TextBox;
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
-            {
-                CPF.SelectionStart = CPF.Text.Length + 1;
-
-                if (CPF.Text.Length == 3 || CPF.Text.Length == 7)
-                    CPF.Text += ".";
-                else if (CPF.Text.Length == 11)
-                    CPF.Text += "-";
-                CPF.SelectionStart = CPF.Text.Length + 1;
-            }
+            DeletarCliente();
         }
-
-        private void PadraoTelefonicoTextBox(object sender, KeyPressEventArgs e)
-        {
-            TextBox Tel = sender as TextBox;
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
-            {
-                Tel.SelectionStart = Tel.Text.Length + 1;
-
-                if (Tel.Text.Length == 0 || Tel.Text.Length == 1)
-                    Tel.Text += "(";
-                else if (Tel.Text.Length == 3)
-                    Tel.Text += ")";
-                else if (Tel.Text.Length == 8)
-                    Tel.Text += "-";
-                Tel.SelectionStart = Tel.Text.Length + 1;
-            }
-        }
-
 
         private void txtNumeroTelefone_KeyPress(object sender, KeyPressEventArgs e)
         {
-            PadraoTelefonicoTextBox(sender, e);
+            ValidarDigitos.PadraoTelefonicoTextBox(sender, e);
             ValidarDigitos.ApenasNumerosBackspace(e);
         }
 
         private void txtTelefoneRecado_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             ValidarDigitos.ApenasNumerosBackspace(e);
-            PadraoTelefonicoTextBox(sender, e);
+            ValidarDigitos.PadraoTelefonicoTextBox(sender, e);
         }
 
         private void txtDocumentoCPF_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDigitos.ApenasNumerosBackspace(e);
-            PadraoDocumentoCPFTextbox(sender, e);
+            ValidarDigitos.PadraoDocumentoCPFTextbox(sender, e);
         }
 
         private void txtDocumentoCPF_Enter(object sender, EventArgs e)
@@ -381,21 +353,10 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             if (chkDocumentoCPF.Checked == true)
             {
-
                 txtBuscarClienteNomeEDocumento.MaxLength = 14;
                 ValidarDigitos.ApenasNumerosBackspace(e);
+                ValidarDigitos.PadraoDocumentoCPFTextbox(sender, e);
 
-                TextBox CPF = sender as TextBox;
-                if (e.KeyChar >= 48 && e.KeyChar <= 57)
-                {
-                    CPF.SelectionStart = CPF.Text.Length + 1;
-
-                    if (CPF.Text.Length == 3 || CPF.Text.Length == 7)
-                        CPF.Text += ".";
-                    else if (CPF.Text.Length == 11)
-                        CPF.Text += "-";
-                    CPF.SelectionStart = CPF.Text.Length + 1;
-                }
             }
 
             if (chkNomeCliente.Checked == true)
@@ -410,7 +371,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             ValidarDigitos.ApenasLetrasBackspace(e);
         }
 
-        private void txtNomeCliente_Enter(object sender, EventArgs e)
+        private void SetarTextBoxNomeClienteEventoEnter()
         {
             if (txtNomeCliente.Text == "Nome do cliente")
             {
@@ -418,7 +379,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
-        private void txtNomeCliente_Leave(object sender, EventArgs e)
+        private void SetarTextBoxNomeClienteEventoLeave()
         {
             if (txtNomeCliente.Text == "")
             {
@@ -426,7 +387,17 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
-        private void txtNumeroTelefone_Enter(object sender, EventArgs e)
+        private void txtNomeCliente_Enter(object sender, EventArgs e)
+        {
+            SetarTextBoxNomeClienteEventoEnter();
+        }
+
+        private void txtNomeCliente_Leave(object sender, EventArgs e)
+        {
+            SetarTextBoxNomeClienteEventoLeave();
+        }
+
+        private void SetarTextBoxNumeroTelefoneEventoEnter()
         {
             if (txtNumeroTelefone.Text == "Número")
             {
@@ -434,7 +405,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
-        private void txtNumeroTelefone_Leave(object sender, EventArgs e)
+        private void SetarTextBoxNumeroTelefoneEventoLeave()
         {
             if (txtNumeroTelefone.Text == "")
             {
@@ -442,7 +413,17 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
-        private void txtTelefoneRecado_Enter(object sender, EventArgs e)
+        private void txtNumeroTelefone_Enter(object sender, EventArgs e)
+        {
+            SetarTextBoxNumeroTelefoneEventoEnter();
+        }
+
+        private void txtNumeroTelefone_Leave(object sender, EventArgs e)
+        {
+            SetarTextBoxNumeroTelefoneEventoLeave();
+        }
+
+        private void SetarTextBoxNumeroTelefoneRecadoEventoEnter()
         {
             if (txtTelefoneRecado.Text == "Número")
             {
@@ -450,7 +431,12 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
-        private void txtTelefoneRecado_Leave(object sender, EventArgs e)
+        private void txtTelefoneRecado_Enter(object sender, EventArgs e)
+        {
+            SetarTextBoxNumeroTelefoneRecadoEventoEnter();
+        }
+
+        private void SetarTextBoxNumeroTelefoneRecadoEventoLeave()
         {
             if (txtTelefoneRecado.Text == "")
             {
@@ -458,13 +444,18 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
-        private void txtBuscarClienteNomeEDocumento_Enter(object sender, EventArgs e)
+        private void txtTelefoneRecado_Leave(object sender, EventArgs e)
+        {
+            SetarTextBoxNumeroTelefoneRecadoEventoLeave();
+        }
+
+        private void SetarTextBoxCampoDeBuscaEventoEnter()
         {
             if (txtBuscarClienteNomeEDocumento.Text == "Buscar nome do cliente")
             {
                 txtBuscarClienteNomeEDocumento.Text = "";
             }
-            
+
             if (txtBuscarClienteNomeEDocumento.Text == "Buscar CPF")
             {
                 txtBuscarClienteNomeEDocumento.Text = "";
@@ -474,31 +465,34 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             {
                 txtBuscarClienteNomeEDocumento.Text = "";
             }
-           
-
         }
 
-        private void txtBuscarClienteNomeEDocumento_Leave(object sender, EventArgs e)
+        private void txtBuscarClienteNomeEDocumento_Enter(object sender, EventArgs e)
+        {
+            SetarTextBoxCampoDeBuscaEventoEnter();
+        }
+
+        private void SetarTextBoxCampoDeBuscaEventoLeave()
         {
             if (txtBuscarClienteNomeEDocumento.Text == "")
             {
                 txtBuscarClienteNomeEDocumento.Text = "Buscar nome do cliente";
-                
             }
-            else
+
+            if (txtBuscarClienteNomeEDocumento.Text == "")
             {
                 txtBuscarClienteNomeEDocumento.Text = "Buscar CPF";
             }
-            
-            
-            
-            
-            
-            
-            
-                txtBuscarClienteNomeEDocumento.Text = "Campo de busca";
-            
 
+            if (txtBuscarClienteNomeEDocumento.Text == "")
+            {
+                txtBuscarClienteNomeEDocumento.Text = "Campo de busca";
+            }
+        }
+
+        private void txtBuscarClienteNomeEDocumento_Leave(object sender, EventArgs e)
+        {
+            SetarTextBoxCampoDeBuscaEventoLeave();
         }
 
         private void form_CadastrarClientes_Load(object sender, EventArgs e)
@@ -507,9 +501,3 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         }
     }
 }
-
-
-
-
-
-

@@ -20,8 +20,9 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         //VARIAVEL DO TIPO FORM MODULO SERVIÇO ANDAMENTO
         private form_ModuloServicoAndamento formModulo;
 
+        private form_CadastrarClientes formCalcularDataGarantia;
 
-        //CONSTRUTOR PQ TEM O MESMO NOME DO FORM        (PARAMETRO)        
+        //CONSTRUTOR PQ TEM O MESMO NOME DO FORM        (PARAMETRO)
         public form_CadastrarServicos(form_ModuloServicoAndamento _formModulo)
         {
             InitializeComponent();
@@ -30,11 +31,8 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             CarregarComboBoxClientes();
             PreencherTabelaComDadosServicosAndamentos();
             formModulo = _formModulo;
-            CalcularLucro();
-            dtpDataAtualCadastro.Text = DateTime.Now.ToShortDateString();
-
+            gdv_CadastroServicos.Columns[12].Visible = false;
         }
-
 
         //MÉTODO SEM RETORNO ( QUANDO VOID NÃO RETORNA NADA )
         private void InicilizarBancoGlobal()
@@ -75,20 +73,19 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void AdicionarLinhaGridView(DataTable dt)
         {
-            foreach (CadastroServicoEstrutura cadastro in BancoGlobal.listaCadastrosServicosEstrutura)
+            foreach (CadastroServicoEstrutura servico in BancoGlobal.listaCadastrosServicosEstrutura)
             {
-                if (cadastro.sv_status == 1)
+                if (servico.sv_status == 1)
                 {
-                    dt.Rows.Add(cadastro.sv_dataCadastro.ToShortDateString(), cadastro.sv_id,
-                        BuscarNomeCliente(cadastro.sv_fk_cl_idCliente),
-                        cadastro.sv_aparelho,
-                        cadastro.sv_defeito, cadastro.sv_senha,
-                        cadastro.sv_situacao, cadastro.sv_acessorios, cadastro.sv_valorServico, cadastro.sv_valorPeca,
-                        cadastro.sv_lucroServico.ToString("C"), cadastro.sv_servicoFeito,
-                        cadastro.sv_dataConclusao.ToShortDateString(),
-                        (cadastro.sv_status == 1) ? "Em Andamento" : "Concluido");
+                    dt.Rows.Add(servico.sv_dataCadastro.ToShortDateString(), servico.sv_id,
+                        BuscarNomeCliente(servico.sv_fk_cl_idCliente),
+                        servico.sv_aparelho,
+                        servico.sv_defeito, servico.sv_senha,
+                        servico.sv_situacao, servico.sv_acessorios, servico.sv_valorServico, servico.sv_valorPeca,
+                        servico.sv_lucroServico.ToString("C"), servico.sv_servicoFeito,
+                        servico.sv_dataConclusao.ToShortDateString() == "01/01/0001" ? "" : servico.sv_dataConclusao.ToShortDateString(),
+                        (servico.sv_status == 1) ? "Em Andamento" : "Concluido");
                 }
-
             }
         }
 
@@ -107,18 +104,28 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         public void SetarValoresTextBox()
         {
-            form_EditarServicos form = new form_EditarServicos(this);
-            form.lbID.Text = gdv_CadastroServicos.SelectedCells[1].Value.ToString();
-            form.txtAparelho.Text = gdv_CadastroServicos.SelectedCells[3].Value.ToString();
-            form.txtDefeito.Text = gdv_CadastroServicos.SelectedCells[4].Value.ToString();
-            form.txtSenha.Text = gdv_CadastroServicos.SelectedCells[5].Value.ToString();
-            form.txtSituacao.Text = gdv_CadastroServicos.SelectedCells[6].Value.ToString();
-            form.txtAcessorios.Text = gdv_CadastroServicos.SelectedCells[7].Value.ToString();
-            dtpDataAtualCadastro.Text = gdv_CadastroServicos.SelectedCells[0].Value.ToString();
-            form.txtvalorServico.Text = gdv_CadastroServicos.SelectedCells[8].Value.ToString();
-            form.txtvalorPeca.Text = gdv_CadastroServicos.SelectedCells[9].Value.ToString();
-            form.txtServicoFeito.Text = gdv_CadastroServicos.SelectedCells[11].Value.ToString();
-            form.ShowDialog();
+            int qtdDeLinhasSelecionadas = gdv_CadastroServicos.SelectedRows.Count;
+
+            if (qtdDeLinhasSelecionadas == 0)
+            {
+                MessageBox.Show("SELECIONE ALGUMA LINHA DA TABELA PARA EDITAR,DELETAR OS DADOS OU CONCLUIR SERVIÇO!", "ATENÇÃO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                form_EditarServicos form = new form_EditarServicos(this);
+                form.lbliDServico.Text = gdv_CadastroServicos.SelectedCells[1].Value.ToString();
+                form.txtNomeCliente.Text = gdv_CadastroServicos.SelectedCells[2].Value.ToString();
+                form.txtAparelho.Text = gdv_CadastroServicos.SelectedCells[3].Value.ToString();
+                form.txtDefeito.Text = gdv_CadastroServicos.SelectedCells[4].Value.ToString();
+                form.txtSenha.Text = gdv_CadastroServicos.SelectedCells[5].Value.ToString();
+                form.txtSituacao.Text = gdv_CadastroServicos.SelectedCells[6].Value.ToString();
+                form.txtAcessorios.Text = gdv_CadastroServicos.SelectedCells[7].Value.ToString();
+                form.txtvalorServico.Text = gdv_CadastroServicos.SelectedCells[8].Value.ToString();
+                form.txtvalorPeca.Text = gdv_CadastroServicos.SelectedCells[9].Value.ToString();
+                form.txtServicoFeito.Text = gdv_CadastroServicos.SelectedCells[11].Value.ToString();
+                form.ShowDialog();
+            }
         }
 
         public void BuscarServicoAndamento(string _textoDigitado)
@@ -177,12 +184,20 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             cmbCliente.Text = "";
         }
 
+        private void ResetarValoresTextBox()
+        {
+            txtAparelho.Text = "Modelo do aparelho";
+            txtDefeito.Text = "Digite o defeito";
+            txtAcessorios.Text = "Acessórios do cliente";
+            txtSenha.Text = "Senha do aparelho";
+            txtServicoFeito.Text = "Serviço feito";
+            txtSituacao.Text = "Situação do aparelho";
+        }
+
         private Decimal CalcularLucro()
         {
-
             decimal valorServico = 0;
             decimal valorPeca = 0;
-
 
             if (txtvalorPeca.Text != "")
             {
@@ -222,6 +237,15 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                 return;
             }
 
+            if (txtAparelho.Text == "Modelo do aparelho" || txtDefeito.Text == "Digite o defeito" || txtAcessorios.Text == "Acessórios do cliente" ||
+                txtSenha.Text == "Senha do aparelho" || txtServicoFeito.Text == "Serviço feito" || txtSituacao.Text == "Situação do aparelho")
+            {
+                MessageBox.Show("PREENCHA OS CAMPOS CORRETAMENTE!", "Atenção", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                return;
+            }
+
+
             Decimal lucro = CalcularLucro();
 
             int novaID = BancoGlobal.listaCadastrosServicosEstrutura.Count;
@@ -229,7 +253,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             BancoGlobal.listaCadastrosServicosEstrutura.Add(new CadastroServicoEstrutura(novaID + 1,
                 BuscarIDCliente(cmbCliente.Text), txtAparelho.Text, txtDefeito.Text, txtSenha.Text, txtSituacao.Text,
                 txtAcessorios.Text,
-                dtpDataAtualCadastro.Value, dtpDataConclusao.Value,
+                DateTime.Now,
                 Convert.ToDecimal(txtvalorPeca.Text == "" ? "0" : txtvalorPeca.Text),
                 Convert.ToDecimal(txtvalorServico.Text == "" ? "0" : txtvalorServico.Text), lucro, txtServicoFeito.Text,
                 1));
@@ -247,6 +271,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             formModulo.lblHome.Text = "CADASTRAR";
             CadastrarServicos();
             PreencherTabelaComDadosServicosAndamentos();
+            ResetarValoresTextBox();
             gdv_CadastroServicos.ClearSelection();
         }
 
@@ -258,28 +283,15 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void txtBuscarServicoAparelho_KeyUp(object sender, KeyEventArgs e)
         {
-
             if (txtBuscarServicoAparelho.Text == "")
             {
                 PreencherTabelaComDadosServicosAndamentos();
-
             }
         }
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int qtdDeLinhasSelecionadas = gdv_CadastroServicos.SelectedRows.Count;
-
-
-            if (qtdDeLinhasSelecionadas == 0)
-            {
-                MessageBox.Show("SELECIONE ALGUMA LINHA DA TABELA PARA EDITAR,DELETAR OS DADOS OU CONCLUIR SERVIÇO!", "ATENÇÃO",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                SetarValoresTextBox();
-            }
+            SetarValoresTextBox();
         }
 
         private void form_CadastrarServicos_Load(object sender, EventArgs e)
@@ -287,7 +299,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             gdv_CadastroServicos.ClearSelection();
         }
 
-        private void deletarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DeletarCadastroServiço()
         {
             int qtdDeLinhasSelecionadas = gdv_CadastroServicos.SelectedRows.Count;
 
@@ -296,7 +308,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                 MessageBox.Show("SELECIONE ALGUMA LINHA DA TABELA PARA EDITAR OU DELETAR OS DADOS!", "ATENÇÃO",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
-
             }
 
             DataTable dt = CriarDataTableServicos();
@@ -304,7 +315,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
             foreach (CadastroServicoEstrutura servico in BancoGlobal.listaCadastrosServicosEstrutura)
             {
-
                 if (servico.sv_id == Convert.ToInt32(gdv_CadastroServicos.SelectedCells[1].Value.ToString()))
                 {
                     if (MessageBox.Show("TEM CERTEZA? ", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
@@ -313,7 +323,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                         BancoGlobal.listaCadastrosServicosEstrutura.Remove(servico);
                         PreencherTabelaComDadosServicosAndamentos();
                         break;
-
                     }
                     else
                     {
@@ -321,6 +330,11 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                     }
                 }
             }
+        }
+
+        private void deletarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeletarCadastroServiço();
         }
 
         private void txtAparelho_KeyPress(object sender, KeyPressEventArgs e)
@@ -335,7 +349,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void txtBuscarServicoAparelho_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             ValidarDigitos.ApenasSpaceLetrasNumerosBackspace(e);
         }
 
@@ -384,37 +397,24 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
                 foreach (CadastroServicoEstrutura servico in BancoGlobal.listaCadastrosServicosEstrutura)
                 {
-
                     if (servico.sv_id == Convert.ToInt32(gdv_CadastroServicos.SelectedCells[1].Value.ToString()))
                     {
-                        if (servico.sv_status == 1)
+                        if (MessageBox.Show("TEM CERTEZA? ", "ATENÇÃO", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question) == DialogResult.Yes)
                         {
+                            form_CalcularDataGarantia form = new form_CalcularDataGarantia(this);
+                            form.lblIDCliente.Text = gdv_CadastroServicos.SelectedCells[2].Value.ToString();
+                            form.lblIDservico.Text = gdv_CadastroServicos.SelectedCells[1].Value.ToString();
 
-
-
-                            if (MessageBox.Show("TEM CERTEZA? ", "ATENÇÃO", MessageBoxButtons.YesNo,
-                                    MessageBoxIcon.Question) == DialogResult.Yes)
-                            {
-
-                                //form_CalcularDataGarantia form = new form_CalcularDataGarantia(this);
-                                //form.ShowDialog();
-                                servico.sv_status = 0;
-                                servico.sv_dataConclusao = DateTime.Now;
-                                PreencherTabelaComDadosServicosAndamentos();
-                                break;
-
-                            }
-                            else
-                            {
-
-                            }
-
-
-
+                            form.ShowDialog();
+                            MessageBox.Show("Serviço concluido com sucesso!", "Sucesso",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            servico.sv_status = 0;
+                            PreencherTabelaComDadosServicosAndamentos();
+                            break;
                         }
                     }
                 }
-
             }
         }
 
@@ -423,12 +423,17 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             ConcluirServico();
         }
 
-        private void txtAparelho_Enter(object sender, EventArgs e)
+        private void SetarValoresTextBoxAparelhoEventoEnter()
         {
             if (txtAparelho.Text == "Modelo do aparelho")
             {
                 txtAparelho.Text = "";
             }
+        }
+
+        private void txtAparelho_Enter(object sender, EventArgs e)
+        {
+            SetarValoresTextBoxAparelhoEventoEnter();
         }
 
         private void txtAparelho_Leave(object sender, EventArgs e)
@@ -439,7 +444,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
-        private void txtDefeito_Enter(object sender, EventArgs e)
+        private void SetarValoresTextBoxAparelhoEventoLeave()
         {
             if (txtDefeito.Text == "Digite o defeito")
             {
@@ -447,7 +452,17 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
+        private void txtDefeito_Enter(object sender, EventArgs e)
+        {
+            SetarValoresTextBoxAparelhoEventoLeave();
+        }
+
         private void txtDefeito_Leave(object sender, EventArgs e)
+        {
+            SetarValoresTextBoxDefeitoEventoLeave();
+        }
+
+        private void SetarValoresTextBoxDefeitoEventoLeave()
         {
             if (txtDefeito.Text == "")
             {
@@ -455,7 +470,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
-        private void txtAcessorios_Enter(object sender, EventArgs e)
+        private void SetarValoresTextBoxAcessoriosEventoEnter()
         {
             if (txtAcessorios.Text == "Acessórios do cliente")
             {
@@ -463,13 +478,23 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
-        private void txtAcessorios_Leave(object sender, EventArgs e)
+
+        private void txtAcessorios_Enter(object sender, EventArgs e)
+        {
+            SetarValoresTextBoxAcessoriosEventoEnter();
+        }
+
+        private void SetarValoresTextBoxAcessoriosEventoLeave()
         {
             if (txtAcessorios.Text == "")
             {
                 txtAcessorios.Text = "Acessórios do cliente";
             }
+        }
 
+        private void txtAcessorios_Leave(object sender, EventArgs e)
+        {
+            SetarValoresTextBoxAcessoriosEventoLeave();
         }
 
         private void txtSenha_Enter(object sender, EventArgs e)
@@ -480,16 +505,20 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
-        private void txtSenha_Leave(object sender, EventArgs e)
+        private void SetarValoresTextBoxSenhaEventoLeave()
         {
             if (txtSenha.Text == "")
             {
                 txtSenha.Text = "Senha do aparelho";
-
             }
         }
 
-        private void txtServicoFeito_Enter(object sender, EventArgs e)
+        private void txtSenha_Leave(object sender, EventArgs e)
+        {
+          SetarValoresTextBoxSenhaEventoLeave();   
+        }
+
+        private void SetarValoresTextBoxSenhaEventoEnter()
         {
             if (txtServicoFeito.Text == "Serviço feito")
             {
@@ -497,7 +526,17 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
         }
 
+        private void txtServicoFeito_Enter(object sender, EventArgs e)
+        {
+           SetarValoresTextBoxSenhaEventoEnter();
+        }
+
         private void txtServicoFeito_Leave(object sender, EventArgs e)
+        {
+            SetarTextBoxServicoFeitoEventoLeave();
+        }
+
+        private void SetarTextBoxServicoFeitoEventoLeave()
         {
             if (txtServicoFeito.Text == "")
             {
@@ -507,15 +546,24 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void txtSituacao_Enter(object sender, EventArgs e)
         {
+            SetarTextBoxSituacaoEventoEnter();
+        }
+
+        private void SetarTextBoxSituacaoEventoEnter()
+        {
             if (txtSituacao.Text == "Situação do aparelho")
             {
                 txtSituacao.Text = "";
             }
-
-
         }
 
+
         private void txtSituacao_Leave(object sender, EventArgs e)
+        {
+            SetarTextBoxSituacaoEventoLeave();
+        }
+
+        private void SetarTextBoxSituacaoEventoLeave()
         {
             if (txtSituacao.Text == "")
             {
@@ -525,22 +573,28 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void txtBuscarServicoAparelho_Enter(object sender, EventArgs e)
         {
+            SetarTextBoxServicoEventoEnter();
+        }
 
+        private void SetarTextBoxServicoEventoEnter()
+        {
             if (txtBuscarServicoAparelho.Text == "Busca feita por aparelho")
             {
                 txtBuscarServicoAparelho.Text = "";
             }
         }
 
-        private void txtBuscarServicoAparelho_Leave(object sender, EventArgs e)
+        private void SetarTextBoxServicoEventoLeave ()
         {
             if (txtBuscarServicoAparelho.Text == "")
             {
                 txtBuscarServicoAparelho.Text = "Busca feita por aparelho";
             }
         }
+
+        private void txtBuscarServicoAparelho_Leave(object sender, EventArgs e)
+        {
+           SetarTextBoxServicoEventoLeave();
+        }
     }
 }
-
-
-

@@ -35,8 +35,10 @@ namespace Sistema_OS___Assistência_Técnica
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.lblHome = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btnLucrosPrejuizos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnServicosConcluidos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnMinimizarJanela = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnFecharJanela = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -46,11 +48,14 @@ namespace Sistema_OS___Assistência_Técnica
             this.btnCadastrarClientes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCadastrarServicos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlDesktop = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator5 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.pctHome)).BeginInit();
+            this.pnlDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuFormDock1
@@ -110,6 +115,96 @@ namespace Sistema_OS___Assistência_Técnica
             this.lblHome.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblHome.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // btnLucrosPrejuizos
+            // 
+            this.btnLucrosPrejuizos.AllowAnimations = true;
+            this.btnLucrosPrejuizos.AllowMouseEffects = true;
+            this.btnLucrosPrejuizos.AllowToggling = false;
+            this.btnLucrosPrejuizos.AnimationSpeed = 200;
+            this.btnLucrosPrejuizos.AutoGenerateColors = false;
+            this.btnLucrosPrejuizos.AutoRoundBorders = false;
+            this.btnLucrosPrejuizos.AutoSizeLeftIcon = true;
+            this.btnLucrosPrejuizos.AutoSizeRightIcon = true;
+            this.btnLucrosPrejuizos.BackColor = System.Drawing.Color.Transparent;
+            this.btnLucrosPrejuizos.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(214)))), ((int)(((byte)(194)))));
+            this.btnLucrosPrejuizos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLucrosPrejuizos.BackgroundImage")));
+            this.btnLucrosPrejuizos.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnLucrosPrejuizos.ButtonText = "                   Financeiro";
+            this.btnLucrosPrejuizos.ButtonTextMarginLeft = 0;
+            this.btnLucrosPrejuizos.ColorContrastOnClick = 45;
+            this.btnLucrosPrejuizos.ColorContrastOnHover = 45;
+            this.btnLucrosPrejuizos.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnLucrosPrejuizos.CustomizableEdges = borderEdges1;
+            this.btnLucrosPrejuizos.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLucrosPrejuizos.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnLucrosPrejuizos.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnLucrosPrejuizos.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnLucrosPrejuizos.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnLucrosPrejuizos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLucrosPrejuizos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(72)))));
+            this.btnLucrosPrejuizos.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLucrosPrejuizos.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnLucrosPrejuizos.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnLucrosPrejuizos.IconMarginLeft = 11;
+            this.btnLucrosPrejuizos.IconPadding = 10;
+            this.btnLucrosPrejuizos.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLucrosPrejuizos.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnLucrosPrejuizos.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnLucrosPrejuizos.IconSize = 25;
+            this.btnLucrosPrejuizos.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(214)))), ((int)(((byte)(194)))));
+            this.btnLucrosPrejuizos.IdleBorderRadius = 1;
+            this.btnLucrosPrejuizos.IdleBorderThickness = 1;
+            this.btnLucrosPrejuizos.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(214)))), ((int)(((byte)(194)))));
+            this.btnLucrosPrejuizos.IdleIconLeftImage = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_profits_100;
+            this.btnLucrosPrejuizos.IdleIconRightImage = null;
+            this.btnLucrosPrejuizos.IndicateFocus = false;
+            this.btnLucrosPrejuizos.Location = new System.Drawing.Point(6, 335);
+            this.btnLucrosPrejuizos.Name = "btnLucrosPrejuizos";
+            this.btnLucrosPrejuizos.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnLucrosPrejuizos.OnDisabledState.BorderRadius = 1;
+            this.btnLucrosPrejuizos.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnLucrosPrejuizos.OnDisabledState.BorderThickness = 1;
+            this.btnLucrosPrejuizos.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnLucrosPrejuizos.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnLucrosPrejuizos.OnDisabledState.IconLeftImage = null;
+            this.btnLucrosPrejuizos.OnDisabledState.IconRightImage = null;
+            this.btnLucrosPrejuizos.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnLucrosPrejuizos.onHoverState.BorderRadius = 1;
+            this.btnLucrosPrejuizos.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnLucrosPrejuizos.onHoverState.BorderThickness = 1;
+            this.btnLucrosPrejuizos.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnLucrosPrejuizos.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLucrosPrejuizos.onHoverState.IconLeftImage = null;
+            this.btnLucrosPrejuizos.onHoverState.IconRightImage = null;
+            this.btnLucrosPrejuizos.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(214)))), ((int)(((byte)(194)))));
+            this.btnLucrosPrejuizos.OnIdleState.BorderRadius = 1;
+            this.btnLucrosPrejuizos.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnLucrosPrejuizos.OnIdleState.BorderThickness = 1;
+            this.btnLucrosPrejuizos.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(214)))), ((int)(((byte)(194)))));
+            this.btnLucrosPrejuizos.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(72)))));
+            this.btnLucrosPrejuizos.OnIdleState.IconLeftImage = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_profits_100;
+            this.btnLucrosPrejuizos.OnIdleState.IconRightImage = null;
+            this.btnLucrosPrejuizos.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnLucrosPrejuizos.OnPressedState.BorderRadius = 1;
+            this.btnLucrosPrejuizos.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnLucrosPrejuizos.OnPressedState.BorderThickness = 1;
+            this.btnLucrosPrejuizos.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnLucrosPrejuizos.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnLucrosPrejuizos.OnPressedState.IconLeftImage = null;
+            this.btnLucrosPrejuizos.OnPressedState.IconRightImage = null;
+            this.btnLucrosPrejuizos.Size = new System.Drawing.Size(196, 70);
+            this.btnLucrosPrejuizos.TabIndex = 4;
+            this.btnLucrosPrejuizos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLucrosPrejuizos.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLucrosPrejuizos.TextMarginLeft = 0;
+            this.btnLucrosPrejuizos.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnLucrosPrejuizos.UseDefaultRadiusAndThickness = true;
+            this.btnLucrosPrejuizos.Click += new System.EventHandler(this.btnLucrosPrejuizos_Click);
+            // 
             // btnServicosConcluidos
             // 
             this.btnServicosConcluidos.AllowAnimations = true;
@@ -129,11 +224,11 @@ namespace Sistema_OS___Assistência_Técnica
             this.btnServicosConcluidos.ColorContrastOnClick = 45;
             this.btnServicosConcluidos.ColorContrastOnHover = 45;
             this.btnServicosConcluidos.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnServicosConcluidos.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnServicosConcluidos.CustomizableEdges = borderEdges2;
             this.btnServicosConcluidos.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnServicosConcluidos.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnServicosConcluidos.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -219,11 +314,11 @@ namespace Sistema_OS___Assistência_Técnica
             this.btnMinimizarJanela.ColorContrastOnClick = 45;
             this.btnMinimizarJanela.ColorContrastOnHover = 45;
             this.btnMinimizarJanela.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnMinimizarJanela.CustomizableEdges = borderEdges2;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnMinimizarJanela.CustomizableEdges = borderEdges3;
             this.btnMinimizarJanela.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnMinimizarJanela.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnMinimizarJanela.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -309,11 +404,11 @@ namespace Sistema_OS___Assistência_Técnica
             this.btnFecharJanela.ColorContrastOnClick = 45;
             this.btnFecharJanela.ColorContrastOnHover = 45;
             this.btnFecharJanela.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnFecharJanela.CustomizableEdges = borderEdges3;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnFecharJanela.CustomizableEdges = borderEdges4;
             this.btnFecharJanela.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnFecharJanela.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnFecharJanela.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -439,11 +534,11 @@ namespace Sistema_OS___Assistência_Técnica
             this.btnCadastrarClientes.ColorContrastOnClick = 45;
             this.btnCadastrarClientes.ColorContrastOnHover = 45;
             this.btnCadastrarClientes.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnCadastrarClientes.CustomizableEdges = borderEdges4;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btnCadastrarClientes.CustomizableEdges = borderEdges5;
             this.btnCadastrarClientes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCadastrarClientes.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCadastrarClientes.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -529,11 +624,11 @@ namespace Sistema_OS___Assistência_Técnica
             this.btnCadastrarServicos.ColorContrastOnClick = 45;
             this.btnCadastrarServicos.ColorContrastOnHover = 45;
             this.btnCadastrarServicos.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.btnCadastrarServicos.CustomizableEdges = borderEdges5;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnCadastrarServicos.CustomizableEdges = borderEdges6;
             this.btnCadastrarServicos.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCadastrarServicos.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCadastrarServicos.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -602,17 +697,30 @@ namespace Sistema_OS___Assistência_Técnica
             // 
             // pnlDesktop
             // 
-            this.pnlDesktop.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.pnlDesktop.BackgroundColor = System.Drawing.Color.DarkSlateGray;
             this.pnlDesktop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlDesktop.BackgroundImage")));
             this.pnlDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlDesktop.BorderColor = System.Drawing.Color.Transparent;
             this.pnlDesktop.BorderRadius = 3;
             this.pnlDesktop.BorderThickness = 1;
-            this.pnlDesktop.Location = new System.Drawing.Point(210, 60);
+            this.pnlDesktop.Controls.Add(this.pictureBox2);
+            this.pnlDesktop.Location = new System.Drawing.Point(209, 60);
             this.pnlDesktop.Name = "pnlDesktop";
             this.pnlDesktop.ShowBorders = true;
             this.pnlDesktop.Size = new System.Drawing.Size(1178, 508);
             this.pnlDesktop.TabIndex = 9999;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(214)))), ((int)(((byte)(194)))));
+            this.pictureBox2.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.transferir__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(140, 121);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(914, 228);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // bunifuSeparator6
             // 
@@ -680,6 +788,7 @@ namespace Sistema_OS___Assistência_Técnica
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1395, 563);
+            this.Controls.Add(this.btnLucrosPrejuizos);
             this.Controls.Add(this.btnServicosConcluidos);
             this.Controls.Add(this.btnMinimizarJanela);
             this.Controls.Add(this.btnFecharJanela);
@@ -699,6 +808,8 @@ namespace Sistema_OS___Assistência_Técnica
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modulo de Serviços em Andamento";
             ((System.ComponentModel.ISupportInitialize)(this.pctHome)).EndInit();
+            this.pnlDesktop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -720,6 +831,8 @@ namespace Sistema_OS___Assistência_Técnica
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnFecharJanela;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMinimizarJanela;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnServicosConcluidos;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLucrosPrejuizos;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

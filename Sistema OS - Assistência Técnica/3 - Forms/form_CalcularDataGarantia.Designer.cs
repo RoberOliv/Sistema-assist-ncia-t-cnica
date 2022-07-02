@@ -34,14 +34,19 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.txtQuantidadeDiasGarantia = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuSeparator11 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator10 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.dfgdfgdf = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSalvarGarantia = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.lblIDservico = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblIDCliente = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,7 +123,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtQuantidadeDiasGarantia.TextPlaceholder = "";
             this.txtQuantidadeDiasGarantia.UseSystemPasswordChar = false;
             this.txtQuantidadeDiasGarantia.WordWrap = true;
-            this.txtQuantidadeDiasGarantia.TextChanged += new System.EventHandler(this.txtQuantidadeDiasGarantia_TextChanged);
+            this.txtQuantidadeDiasGarantia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantidadeDiasGarantia_KeyPress);
             // 
             // bunifuSeparator11
             // 
@@ -195,32 +200,195 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuSeparator3.Size = new System.Drawing.Size(553, 5);
             this.bunifuSeparator3.TabIndex = 104;
             // 
-            // bunifuLabel1
+            // dfgdfgdf
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(74, 49);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(188, 21);
-            this.bunifuLabel1.TabIndex = 105;
-            this.bunifuLabel1.Text = "Calcular dias de garantia";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.dfgdfgdf.AllowParentOverrides = false;
+            this.dfgdfgdf.AutoEllipsis = false;
+            this.dfgdfgdf.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dfgdfgdf.CursorType = System.Windows.Forms.Cursors.Default;
+            this.dfgdfgdf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.dfgdfgdf.ForeColor = System.Drawing.Color.White;
+            this.dfgdfgdf.Location = new System.Drawing.Point(78, 49);
+            this.dfgdfgdf.Name = "dfgdfgdf";
+            this.dfgdfgdf.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dfgdfgdf.Size = new System.Drawing.Size(188, 21);
+            this.dfgdfgdf.TabIndex = 105;
+            this.dfgdfgdf.Text = "Calcular dias de garantia";
+            this.dfgdfgdf.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.dfgdfgdf.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sistema_OS___Assistência_Técnica.Properties.Resources.icons8_garantia_100;
-            this.pictureBox1.Location = new System.Drawing.Point(121, 143);
+            this.pictureBox1.Location = new System.Drawing.Point(73, 161);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 76);
+            this.pictureBox1.Size = new System.Drawing.Size(46, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 106;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnSalvarGarantia
+            // 
+            this.btnSalvarGarantia.AllowAnimations = true;
+            this.btnSalvarGarantia.AllowMouseEffects = true;
+            this.btnSalvarGarantia.AllowToggling = false;
+            this.btnSalvarGarantia.AnimationSpeed = 200;
+            this.btnSalvarGarantia.AutoGenerateColors = false;
+            this.btnSalvarGarantia.AutoRoundBorders = false;
+            this.btnSalvarGarantia.AutoSizeLeftIcon = true;
+            this.btnSalvarGarantia.AutoSizeRightIcon = true;
+            this.btnSalvarGarantia.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvarGarantia.BackColor1 = System.Drawing.Color.DarkSlateGray;
+            this.btnSalvarGarantia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalvarGarantia.BackgroundImage")));
+            this.btnSalvarGarantia.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSalvarGarantia.ButtonText = "SALVAR GARANTIA";
+            this.btnSalvarGarantia.ButtonTextMarginLeft = 0;
+            this.btnSalvarGarantia.ColorContrastOnClick = 45;
+            this.btnSalvarGarantia.ColorContrastOnHover = 45;
+            this.btnSalvarGarantia.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnSalvarGarantia.CustomizableEdges = borderEdges1;
+            this.btnSalvarGarantia.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSalvarGarantia.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnSalvarGarantia.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnSalvarGarantia.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnSalvarGarantia.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnSalvarGarantia.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSalvarGarantia.ForeColor = System.Drawing.Color.White;
+            this.btnSalvarGarantia.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvarGarantia.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnSalvarGarantia.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnSalvarGarantia.IconMarginLeft = 11;
+            this.btnSalvarGarantia.IconPadding = 10;
+            this.btnSalvarGarantia.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvarGarantia.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnSalvarGarantia.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnSalvarGarantia.IconSize = 25;
+            this.btnSalvarGarantia.IdleBorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSalvarGarantia.IdleBorderRadius = 1;
+            this.btnSalvarGarantia.IdleBorderThickness = 1;
+            this.btnSalvarGarantia.IdleFillColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSalvarGarantia.IdleIconLeftImage = null;
+            this.btnSalvarGarantia.IdleIconRightImage = null;
+            this.btnSalvarGarantia.IndicateFocus = false;
+            this.btnSalvarGarantia.Location = new System.Drawing.Point(125, 161);
+            this.btnSalvarGarantia.Name = "btnSalvarGarantia";
+            this.btnSalvarGarantia.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnSalvarGarantia.OnDisabledState.BorderRadius = 1;
+            this.btnSalvarGarantia.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSalvarGarantia.OnDisabledState.BorderThickness = 1;
+            this.btnSalvarGarantia.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnSalvarGarantia.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnSalvarGarantia.OnDisabledState.IconLeftImage = null;
+            this.btnSalvarGarantia.OnDisabledState.IconRightImage = null;
+            this.btnSalvarGarantia.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnSalvarGarantia.onHoverState.BorderRadius = 1;
+            this.btnSalvarGarantia.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSalvarGarantia.onHoverState.BorderThickness = 1;
+            this.btnSalvarGarantia.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnSalvarGarantia.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnSalvarGarantia.onHoverState.IconLeftImage = null;
+            this.btnSalvarGarantia.onHoverState.IconRightImage = null;
+            this.btnSalvarGarantia.OnIdleState.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSalvarGarantia.OnIdleState.BorderRadius = 1;
+            this.btnSalvarGarantia.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSalvarGarantia.OnIdleState.BorderThickness = 1;
+            this.btnSalvarGarantia.OnIdleState.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSalvarGarantia.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnSalvarGarantia.OnIdleState.IconLeftImage = null;
+            this.btnSalvarGarantia.OnIdleState.IconRightImage = null;
+            this.btnSalvarGarantia.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnSalvarGarantia.OnPressedState.BorderRadius = 1;
+            this.btnSalvarGarantia.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnSalvarGarantia.OnPressedState.BorderThickness = 1;
+            this.btnSalvarGarantia.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnSalvarGarantia.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnSalvarGarantia.OnPressedState.IconLeftImage = null;
+            this.btnSalvarGarantia.OnPressedState.IconRightImage = null;
+            this.btnSalvarGarantia.Size = new System.Drawing.Size(131, 39);
+            this.btnSalvarGarantia.TabIndex = 100023;
+            this.btnSalvarGarantia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSalvarGarantia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSalvarGarantia.TextMarginLeft = 0;
+            this.btnSalvarGarantia.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnSalvarGarantia.UseDefaultRadiusAndThickness = true;
+            this.btnSalvarGarantia.Click += new System.EventHandler(this.btnSalvarGarantia_Click);
+            // 
+            // bunifuFormDock1
+            // 
+            this.bunifuFormDock1.AllowFormDragging = true;
+            this.bunifuFormDock1.AllowFormDropShadow = true;
+            this.bunifuFormDock1.AllowFormResizing = true;
+            this.bunifuFormDock1.AllowHidingBottomRegion = true;
+            this.bunifuFormDock1.AllowOpacityChangesWhileDragging = false;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.RightBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.TopBorder.ShowBorder = true;
+            this.bunifuFormDock1.ContainerControl = this;
+            this.bunifuFormDock1.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
+            this.bunifuFormDock1.DockingIndicatorsOpacity = 0.5D;
+            this.bunifuFormDock1.DockingOptions.DockAll = true;
+            this.bunifuFormDock1.DockingOptions.DockBottomLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockBottomRight = true;
+            this.bunifuFormDock1.DockingOptions.DockFullScreen = true;
+            this.bunifuFormDock1.DockingOptions.DockLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockRight = true;
+            this.bunifuFormDock1.DockingOptions.DockTopLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockTopRight = true;
+            this.bunifuFormDock1.FormDraggingOpacity = 0.9D;
+            this.bunifuFormDock1.ParentForm = this;
+            this.bunifuFormDock1.ShowCursorChanges = true;
+            this.bunifuFormDock1.ShowDockingIndicators = true;
+            this.bunifuFormDock1.TitleBarOptions.AllowFormDragging = true;
+            this.bunifuFormDock1.TitleBarOptions.BunifuFormDock = this.bunifuFormDock1;
+            this.bunifuFormDock1.TitleBarOptions.DoubleClickToExpandWindow = true;
+            this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
+            this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
+            // 
+            // lblIDservico
+            // 
+            this.lblIDservico.AllowParentOverrides = false;
+            this.lblIDservico.AutoEllipsis = false;
+            this.lblIDservico.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblIDservico.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblIDservico.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblIDservico.Location = new System.Drawing.Point(29, 13);
+            this.lblIDservico.Name = "lblIDservico";
+            this.lblIDservico.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblIDservico.Size = new System.Drawing.Size(11, 15);
+            this.lblIDservico.TabIndex = 100024;
+            this.lblIDservico.Text = "ID";
+            this.lblIDservico.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblIDservico.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblIDservico.Visible = false;
+            // 
+            // lblIDCliente
+            // 
+            this.lblIDCliente.AllowParentOverrides = false;
+            this.lblIDCliente.AutoEllipsis = false;
+            this.lblIDCliente.CursorType = null;
+            this.lblIDCliente.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblIDCliente.Location = new System.Drawing.Point(193, 13);
+            this.lblIDCliente.Name = "lblIDCliente";
+            this.lblIDCliente.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblIDCliente.Size = new System.Drawing.Size(49, 15);
+            this.lblIDCliente.TabIndex = 100025;
+            this.lblIDCliente.Text = "IDServiço";
+            this.lblIDCliente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblIDCliente.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblIDCliente.Visible = false;
             // 
             // form_CalcularDataGarantia
             // 
@@ -228,8 +396,11 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(338, 237);
+            this.Controls.Add(this.lblIDCliente);
+            this.Controls.Add(this.lblIDservico);
+            this.Controls.Add(this.btnSalvarGarantia);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.dfgdfgdf);
             this.Controls.Add(this.bunifuSeparator3);
             this.Controls.Add(this.bunifuSeparator2);
             this.Controls.Add(this.bunifuSeparator1);
@@ -255,7 +426,11 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator3;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel dfgdfgdf;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSalvarGarantia;
+        private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
+        public Bunifu.UI.WinForms.BunifuLabel lblIDCliente;
+        public Bunifu.UI.WinForms.BunifuLabel lblIDservico;
     }
 }

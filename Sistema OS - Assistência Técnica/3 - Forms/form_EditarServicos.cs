@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Sistema_OS___Assistência_Técnica._1___BancoGlobal;
 using Sistema_OS___Assistência_Técnica._2___Classes;
 using Sistema_OS___Assistência_Técnica.Properties;
+using Utilities.BunifuCheckBox.Transitions;
 
 namespace Sistema_OS___Assistência_Técnica._3___Forms
 {
@@ -33,6 +34,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         }
 
+       
 
         private void InicializarBancoGlobal()
         {
@@ -65,6 +67,34 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         }
 
+        private string BuscaTelefoneCliente(int _idCliente)
+        {
+
+            foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
+            {
+                if (cliente.cl_id == _idCliente)
+                {
+                    return cliente.cl_telefone;
+                }
+            }
+
+            return "";
+        }
+
+        private string BuscaCPFCliente(int _idCliente)
+        {
+
+            foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
+            {
+                if (cliente.cl_id == _idCliente)
+                {
+                    return cliente.cl_cpf;
+                }
+            }
+
+            return "";
+        }
+
         private void SalvarAlteracaoServico()
         {
 
@@ -78,11 +108,12 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             foreach (CadastroServicoEstrutura servico in BancoGlobal.listaCadastrosServicosEstrutura)
             {
 
-                if (servico.sv_id == Convert.ToInt32(lbID.Text))
+                if (servico.sv_id == Convert.ToInt32(lbliDServico.Text))
                 {
                     Decimal lucro = CalcularLucro();
                     char[] caracteresParaRemover = { 'R', '$' };
 
+                    
                     servico.sv_aparelho = txtAparelho.Text;
                     servico.sv_dataCadastro = dtpDataAtualCadastro.Value;
                     servico.sv_defeito = txtDefeito.Text;
@@ -97,6 +128,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                     if (formServicosConcluidos != null)
                     {
                         formServicosConcluidos.PreencherTabelaComDadosServicosConcluidos();
+                        
 
                     }
                     else if (formCadastrarServicos != null)
@@ -171,5 +203,11 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             ValidarDigitos.ApenasSpaceLetrasNumerosBackspace(e);
         }
 
+        private void form_EditarServicos_Load(object sender, EventArgs e)
+        {
+            txtNumeroTelefone.Text = BuscaTelefoneCliente(Convert.ToInt32(lbliDServico.Text));
+            txtDocumentoCPF.Text = BuscaCPFCliente(Convert.ToInt32(lbliDServico.Text));
+
+        }
     }
 }

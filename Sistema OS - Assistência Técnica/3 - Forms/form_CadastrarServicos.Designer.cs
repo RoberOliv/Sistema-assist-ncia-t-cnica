@@ -73,13 +73,11 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties34 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties35 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties36 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.gdv_CadastroServicos = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deletarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextConcluirServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.contextEditarCadastroServico = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextDeletarCadastroServico = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextConcluirServico = new System.Windows.Forms.ToolStripMenuItem();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -95,11 +93,8 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel12 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel15 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.dtpDataConclusao = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.dtpDataAtualCadastro = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.btnCadastrarServicos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -125,7 +120,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             ((System.ComponentModel.ISupportInitialize)(this.gdv_CadastroServicos)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -134,25 +128,10 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.Location = new System.Drawing.Point(851, 46);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(116, 15);
-            this.bunifuLabel1.TabIndex = 9999;
-            this.bunifuLabel1.Text = "DATA DE CADASTRO";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // gdv_CadastroServicos
             // 
             this.gdv_CadastroServicos.AllowCustomTheming = true;
+            this.gdv_CadastroServicos.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
@@ -220,48 +199,32 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editarToolStripMenuItem,
-            this.deletarToolStripMenuItem,
-            this.contextConcluirServiçoToolStripMenuItem});
+            this.contextEditarCadastroServico,
+            this.contextDeletarCadastroServico,
+            this.contextConcluirServico});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(161, 70);
             // 
-            // editarToolStripMenuItem
+            // contextEditarCadastroServico
             // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.editarToolStripMenuItem.Text = "Editar";
-            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
+            this.contextEditarCadastroServico.Name = "contextEditarCadastroServico";
+            this.contextEditarCadastroServico.Size = new System.Drawing.Size(160, 22);
+            this.contextEditarCadastroServico.Text = "Editar";
+            this.contextEditarCadastroServico.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
-            // deletarToolStripMenuItem
+            // contextDeletarCadastroServico
             // 
-            this.deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
-            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.deletarToolStripMenuItem.Text = "Deletar";
-            this.deletarToolStripMenuItem.Click += new System.EventHandler(this.deletarToolStripMenuItem_Click);
+            this.contextDeletarCadastroServico.Name = "contextDeletarCadastroServico";
+            this.contextDeletarCadastroServico.Size = new System.Drawing.Size(160, 22);
+            this.contextDeletarCadastroServico.Text = "Deletar";
+            this.contextDeletarCadastroServico.Click += new System.EventHandler(this.deletarToolStripMenuItem_Click);
             // 
-            // contextConcluirServiçoToolStripMenuItem
+            // contextConcluirServico
             // 
-            this.contextConcluirServiçoToolStripMenuItem.Name = "contextConcluirServiçoToolStripMenuItem";
-            this.contextConcluirServiçoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.contextConcluirServiçoToolStripMenuItem.Text = "Concluir Serviço";
-            this.contextConcluirServiçoToolStripMenuItem.Click += new System.EventHandler(this.contextConcluirServiçoToolStripMenuItem_Click);
-            // 
-            // bunifuLabel7
-            // 
-            this.bunifuLabel7.AllowParentOverrides = false;
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel7.Location = new System.Drawing.Point(1028, 46);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(124, 15);
-            this.bunifuLabel7.TabIndex = 20;
-            this.bunifuLabel7.Text = "DATA DE CONCLUSÃO";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.contextConcluirServico.Name = "contextConcluirServico";
+            this.contextConcluirServico.Size = new System.Drawing.Size(160, 22);
+            this.contextConcluirServico.Text = "Concluir Serviço";
+            this.contextConcluirServico.Click += new System.EventHandler(this.contextConcluirServiçoToolStripMenuItem_Click);
             // 
             // bunifuLabel8
             // 
@@ -271,7 +234,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel8.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel8.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel8.Location = new System.Drawing.Point(842, 86);
+            this.bunifuLabel8.Location = new System.Drawing.Point(850, 22);
             this.bunifuLabel8.Name = "bunifuLabel8";
             this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel8.Size = new System.Drawing.Size(80, 15);
@@ -288,7 +251,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.lbl.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lbl.Location = new System.Drawing.Point(1010, 86);
+            this.lbl.Location = new System.Drawing.Point(1018, 22);
             this.lbl.Name = "lbl";
             this.lbl.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl.Size = new System.Drawing.Size(64, 15);
@@ -472,7 +435,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel12.CursorType = null;
             this.bunifuLabel12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel12.ForeColor = System.Drawing.Color.Black;
-            this.bunifuLabel12.Location = new System.Drawing.Point(928, 86);
+            this.bunifuLabel12.Location = new System.Drawing.Point(936, 22);
             this.bunifuLabel12.Name = "bunifuLabel12";
             this.bunifuLabel12.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel12.Size = new System.Drawing.Size(14, 15);
@@ -489,7 +452,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel15.CursorType = null;
             this.bunifuLabel15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel15.ForeColor = System.Drawing.Color.Black;
-            this.bunifuLabel15.Location = new System.Drawing.Point(1077, 86);
+            this.bunifuLabel15.Location = new System.Drawing.Point(1085, 22);
             this.bunifuLabel15.Name = "bunifuLabel15";
             this.bunifuLabel15.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel15.Size = new System.Drawing.Size(14, 15);
@@ -497,56 +460,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.bunifuLabel15.Text = "R$";
             this.bunifuLabel15.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel15.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // dtpDataConclusao
-            // 
-            this.dtpDataConclusao.BackColor = System.Drawing.Color.Transparent;
-            this.dtpDataConclusao.BorderRadius = 1;
-            this.dtpDataConclusao.Color = System.Drawing.Color.Black;
-            this.dtpDataConclusao.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.dtpDataConclusao.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dtpDataConclusao.DisabledColor = System.Drawing.Color.Gray;
-            this.dtpDataConclusao.DisplayWeekNumbers = false;
-            this.dtpDataConclusao.DPHeight = 0;
-            this.dtpDataConclusao.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpDataConclusao.FillDatePicker = false;
-            this.dtpDataConclusao.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataConclusao.ForeColor = System.Drawing.Color.White;
-            this.dtpDataConclusao.Icon = ((System.Drawing.Image)(resources.GetObject("dtpDataConclusao.Icon")));
-            this.dtpDataConclusao.IconColor = System.Drawing.Color.Black;
-            this.dtpDataConclusao.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtpDataConclusao.LeftTextMargin = 5;
-            this.dtpDataConclusao.Location = new System.Drawing.Point(999, 6);
-            this.dtpDataConclusao.MinimumSize = new System.Drawing.Size(4, 32);
-            this.dtpDataConclusao.Name = "dtpDataConclusao";
-            this.dtpDataConclusao.Size = new System.Drawing.Size(168, 32);
-            this.dtpDataConclusao.TabIndex = 100002;
-            this.dtpDataConclusao.Value = new System.DateTime(2022, 6, 18, 0, 0, 0, 0);
-            // 
-            // dtpDataAtualCadastro
-            // 
-            this.dtpDataAtualCadastro.BackColor = System.Drawing.Color.Transparent;
-            this.dtpDataAtualCadastro.BorderRadius = 1;
-            this.dtpDataAtualCadastro.Color = System.Drawing.Color.Black;
-            this.dtpDataAtualCadastro.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.dtpDataAtualCadastro.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dtpDataAtualCadastro.DisabledColor = System.Drawing.Color.Gray;
-            this.dtpDataAtualCadastro.DisplayWeekNumbers = false;
-            this.dtpDataAtualCadastro.DPHeight = 0;
-            this.dtpDataAtualCadastro.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpDataAtualCadastro.FillDatePicker = false;
-            this.dtpDataAtualCadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataAtualCadastro.ForeColor = System.Drawing.Color.White;
-            this.dtpDataAtualCadastro.Icon = ((System.Drawing.Image)(resources.GetObject("dtpDataAtualCadastro.Icon")));
-            this.dtpDataAtualCadastro.IconColor = System.Drawing.Color.Black;
-            this.dtpDataAtualCadastro.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtpDataAtualCadastro.LeftTextMargin = 5;
-            this.dtpDataAtualCadastro.Location = new System.Drawing.Point(826, 6);
-            this.dtpDataAtualCadastro.MinimumSize = new System.Drawing.Size(4, 32);
-            this.dtpDataAtualCadastro.Name = "dtpDataAtualCadastro";
-            this.dtpDataAtualCadastro.Size = new System.Drawing.Size(168, 32);
-            this.dtpDataAtualCadastro.TabIndex = 100001;
-            this.dtpDataAtualCadastro.Value = new System.DateTime(2022, 6, 18, 0, 0, 0, 0);
             // 
             // btnCadastrarServicos
             // 
@@ -641,22 +554,12 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(789, 75);
+            this.pictureBox8.Location = new System.Drawing.Point(797, 11);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(36, 36);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 67;
             this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(789, 6);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 64;
-            this.pictureBox7.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -1039,7 +942,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtvalorPeca.IconRight = null;
             this.txtvalorPeca.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtvalorPeca.Lines = new string[0];
-            this.txtvalorPeca.Location = new System.Drawing.Point(1003, 75);
+            this.txtvalorPeca.Location = new System.Drawing.Point(1011, 11);
             this.txtvalorPeca.MaxLength = 5;
             this.txtvalorPeca.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtvalorPeca.Modified = false;
@@ -1114,7 +1017,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.txtvalorServico.IconRight = null;
             this.txtvalorServico.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtvalorServico.Lines = new string[0];
-            this.txtvalorServico.Location = new System.Drawing.Point(831, 75);
+            this.txtvalorServico.Location = new System.Drawing.Point(839, 11);
             this.txtvalorServico.MaxLength = 5;
             this.txtvalorServico.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtvalorServico.Modified = false;
@@ -1610,8 +1513,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.ClientSize = new System.Drawing.Size(1177, 508);
             this.Controls.Add(this.bunifuLabel15);
             this.Controls.Add(this.bunifuLabel12);
-            this.Controls.Add(this.dtpDataConclusao);
-            this.Controls.Add(this.dtpDataAtualCadastro);
             this.Controls.Add(this.btnCadastrarServicos);
             this.Controls.Add(this.bunifuLabel14);
             this.Controls.Add(this.bunifuLabel13);
@@ -1619,7 +1520,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.bunifuLabel10);
             this.Controls.Add(this.cmbCliente);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -1645,8 +1545,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             this.Controls.Add(this.bunifuSeparator5);
             this.Controls.Add(this.bunifuSeparator4);
             this.Controls.Add(this.bunifuSeparator3);
-            this.Controls.Add(this.bunifuLabel7);
-            this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.gdv_CadastroServicos);
             this.Controls.Add(this.txtAparelho);
             this.Controls.Add(this.txtDefeito);
@@ -1660,7 +1558,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             ((System.ComponentModel.ISupportInitialize)(this.gdv_CadastroServicos)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1673,8 +1570,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         }
 
         #endregion
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator3;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator4;
@@ -1704,23 +1599,20 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.ComboBox cmbCliente;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
         private System.Windows.Forms.PictureBox pictureBox8;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCadastrarServicos;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contextEditarCadastroServico;
+        private System.Windows.Forms.ToolStripMenuItem contextDeletarCadastroServico;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel14;
         private Bunifu.UI.WinForms.BunifuTextBox txtvalorPeca;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel12;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel15;
-        private System.Windows.Forms.ToolStripMenuItem contextConcluirServiçoToolStripMenuItem;
-        public Bunifu.UI.WinForms.BunifuDatePicker dtpDataAtualCadastro;
-        public Bunifu.UI.WinForms.BunifuDatePicker dtpDataConclusao;
+        private System.Windows.Forms.ToolStripMenuItem contextConcluirServico;
         public Bunifu.UI.WinForms.BunifuDataGridView gdv_CadastroServicos;
     }
 }

@@ -49,6 +49,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
       <HintPath>..\..\SISTEMA MARMORIA BELLAS PEDRAS\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
+      <HintPath>..\..\SISTEMA MARMORIA BELLAS PEDRAS\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
       <HintPath>..\..\SISTEMA MARMORIA BELLAS PEDRAS\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
@@ -119,11 +122,29 @@
     <Compile Include="3 - Forms\form_EditarCadastrosClientes.Designer.cs">
       <DependentUpon>form_EditarCadastrosClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="3 - Forms\form_GarantiaServicoConcluido.cs">
+    <Compile Include="3 - Forms\form_CancelamentoGarantia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="3 - Forms\form_GarantiaServicoConcluido.Designer.cs">
-      <DependentUpon>form_GarantiaServicoConcluido.cs</DependentUpon>
+    <Compile Include="3 - Forms\form_CancelamentoGarantia.Designer.cs">
+      <DependentUpon>form_CancelamentoGarantia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Forms\form_LucrosGastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Forms\form_LucrosGastos.Designer.cs">
+      <DependentUpon>form_LucrosGastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Forms\form_MaioresLucros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Forms\form_MaioresLucros.Designer.cs">
+      <DependentUpon>form_MaioresLucros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Forms\form_MaioresPrejuizos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Forms\form_MaioresPrejuizos.Designer.cs">
+      <DependentUpon>form_MaioresPrejuizos.cs</DependentUpon>
     </Compile>
     <Compile Include="3 - Forms\form_Principal.cs">
       <SubType>Form</SubType>
@@ -136,6 +157,24 @@
     </Compile>
     <Compile Include="3 - Forms\form_ServicosConcluidos.Designer.cs">
       <DependentUpon>form_ServicosConcluidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Forms\form_ClientesComMaisServicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Forms\form_ClientesComMaisServicos.Designer.cs">
+      <DependentUpon>form_ClientesComMaisServicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Forms\form_Financeiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Forms\form_Financeiro.Designer.cs">
+      <DependentUpon>form_Financeiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 - Forms\form_VerGarantia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 - Forms\form_VerGarantia.Designer.cs">
+      <DependentUpon>form_VerGarantia.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -154,14 +193,32 @@
     <EmbeddedResource Include="3 - Forms\form_EditarCadastrosClientes.resx">
       <DependentUpon>form_EditarCadastrosClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="3 - Forms\form_GarantiaServicoConcluido.resx">
-      <DependentUpon>form_GarantiaServicoConcluido.cs</DependentUpon>
+    <EmbeddedResource Include="3 - Forms\form_CancelamentoGarantia.resx">
+      <DependentUpon>form_CancelamentoGarantia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Forms\form_LucrosGastos.resx">
+      <DependentUpon>form_LucrosGastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Forms\form_MaioresLucros.resx">
+      <DependentUpon>form_MaioresLucros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Forms\form_MaioresPrejuizos.resx">
+      <DependentUpon>form_MaioresPrejuizos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="3 - Forms\form_Principal.resx">
       <DependentUpon>form_Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="3 - Forms\form_ServicosConcluidos.resx">
       <DependentUpon>form_ServicosConcluidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Forms\form_ClientesComMaisServicos.resx">
+      <DependentUpon>form_ClientesComMaisServicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Forms\form_Financeiro.resx">
+      <DependentUpon>form_Financeiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 - Forms\form_VerGarantia.resx">
+      <DependentUpon>form_VerGarantia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -255,6 +312,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-selecionado-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-profits-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assistencia-tecnica.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-como-funciona-a-assistencia-tecnica-para-aparelhos-de-pesagens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assistencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1623804836861-manutencao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\326-3264960_itouch-curitiba-assistncia-tcnica-de-celulares-em-android.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db54af_7c5a92c9b9234c1c90b5b98009617338_mv2-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assistência-Técnica-Mairless-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1623804836861-manutencao-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transferir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-à-esquerda-dentro-de-um-círculo-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transferir %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

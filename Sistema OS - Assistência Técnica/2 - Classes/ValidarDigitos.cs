@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Sistema_OS___Assistência_Técnica._2___Classes
 {
-    class ValidarDigitos
+    internal class ValidarDigitos
     {
         public static bool ApenasSpaceLetrasNumerosBackspace(KeyPressEventArgs e)
         {
@@ -42,7 +42,22 @@ namespace Sistema_OS___Assistência_Técnica._2___Classes
             return false;
         }
 
-        public void PadraoTelefonicoTextBox(object sender, KeyPressEventArgs e)
+        public static void PadraoDocumentoCPFTextbox(object sender, KeyPressEventArgs e)
+        {
+            TextBox CPF = sender as TextBox;
+            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+            {
+                CPF.SelectionStart = CPF.Text.Length + 1;
+
+                if (CPF.Text.Length == 3 || CPF.Text.Length == 7)
+                    CPF.Text += ".";
+                else if (CPF.Text.Length == 11)
+                    CPF.Text += "-";
+                CPF.SelectionStart = CPF.Text.Length + 1;
+            }
+        }
+
+        public static void PadraoTelefonicoTextBox(object sender, KeyPressEventArgs e)
         {
             TextBox Tel = sender as TextBox;
             if (e.KeyChar >= 48 && e.KeyChar <= 57)
@@ -61,4 +76,3 @@ namespace Sistema_OS___Assistência_Técnica._2___Classes
 
     }
 }
-

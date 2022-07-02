@@ -27,14 +27,6 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         }
 
-        public form_ServicosConcluidos(form_GarantiaServicosConcluidos _formGarantiaServicosConcluidos)
-        {
-            InitializeComponent();
-            InicializarBancoGlobal();
-            PreencherTabelaComDadosServicosConcluidos();
-            formGarantiaServicosConcluidos = _formGarantiaServicosConcluidos;
-
-        }
 
 
         private void InicializarBancoGlobal()
@@ -64,20 +56,32 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         }
         public void SetarValoresTextBox()
         {
+            int qtdDeLinhasSelecionadas = gdv_CadastroServicosConcluidos.SelectedRows.Count;
 
-            form_EditarServicos form = new form_EditarServicos(this);
-            form.lbID.Text = gdv_CadastroServicosConcluidos.SelectedCells[1].Value.ToString();
-            form.txtAparelho.Text = gdv_CadastroServicosConcluidos.SelectedCells[3].Value.ToString();
-            form.txtDefeito.Text = gdv_CadastroServicosConcluidos.SelectedCells[4].Value.ToString();
-            form.txtSenha.Text = gdv_CadastroServicosConcluidos.SelectedCells[5].Value.ToString();
-            form.txtSituacao.Text = gdv_CadastroServicosConcluidos.SelectedCells[6].Value.ToString();
-            form.txtAcessorios.Text = gdv_CadastroServicosConcluidos.SelectedCells[7].Value.ToString();
-            //form. = gdv_CadastroServicosConcluidos.SelectedCells[0].Value.ToString();
-            form.txtvalorServico.Text = gdv_CadastroServicosConcluidos.SelectedCells[8].Value.ToString();
-            form.txtvalorPeca.Text = gdv_CadastroServicosConcluidos.SelectedCells[9].Value.ToString();
-            form.txtServicoFeito.Text = gdv_CadastroServicosConcluidos.SelectedCells[11].Value.ToString();
 
-            form.ShowDialog();
+            if (qtdDeLinhasSelecionadas == 0)
+            {
+                MessageBox.Show("SELECIONE ALGUMA LINHA DA TABELA PARA EDITAR OU DELETAR OS DADOS!", "ATENÇÃO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+
+                form_EditarServicos form = new form_EditarServicos(this);
+                form.lbliDServico.Text = gdv_CadastroServicosConcluidos.SelectedCells[1].Value.ToString();
+                form.dtpDataAtualCadastro.Text = gdv_CadastroServicosConcluidos.SelectedCells[0].Value.ToString();
+                form.txtAparelho.Text = gdv_CadastroServicosConcluidos.SelectedCells[3].Value.ToString();
+                form.txtDefeito.Text = gdv_CadastroServicosConcluidos.SelectedCells[4].Value.ToString();
+                form.txtSenha.Text = gdv_CadastroServicosConcluidos.SelectedCells[5].Value.ToString();
+                form.txtSituacao.Text = gdv_CadastroServicosConcluidos.SelectedCells[6].Value.ToString();
+                form.txtAcessorios.Text = gdv_CadastroServicosConcluidos.SelectedCells[7].Value.ToString();
+                form.txtvalorServico.Text = gdv_CadastroServicosConcluidos.SelectedCells[8].Value.ToString();
+                form.txtvalorPeca.Text = gdv_CadastroServicosConcluidos.SelectedCells[9].Value.ToString();
+                form.txtServicoFeito.Text = gdv_CadastroServicosConcluidos.SelectedCells[11].Value.ToString();
+                form.ShowDialog();
+
+            }
+
         }
 
         private void AdicionarLinhaGridView(DataTable dt)
@@ -87,11 +91,13 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             {
                 if (servico.sv_status == 0)
                 {
-                    dt.Rows.Add(servico.sv_dataCadastro.ToShortDateString(), servico.sv_id, BuscarNomeCliente(servico.sv_fk_cl_idCliente),
-                            servico.sv_aparelho,
-                            servico.sv_defeito, servico.sv_senha,
-                            servico.sv_situacao, servico.sv_acessorios, servico.sv_valorServico, servico.sv_valorPeca,
-                            servico.sv_lucroServico.ToString("C"), servico.sv_servicoFeito, servico.sv_dataConclusao.ToShortDateString(),
+                    dt.Rows.Add(servico.sv_dataCadastro.ToShortDateString(), servico.sv_id,
+                        BuscarNomeCliente(servico.sv_fk_cl_idCliente),
+                        servico.sv_aparelho,
+                        servico.sv_defeito, servico.sv_senha,
+                        servico.sv_situacao, servico.sv_acessorios, servico.sv_valorServico, servico.sv_valorPeca,
+                        servico.sv_lucroServico.ToString("C"), servico.sv_servicoFeito,
+                        servico.sv_dataConclusao = DateTime.Now.Date,
                             (servico.sv_status == 1) ? "Em Andamento" : "Concluido");
                 }
             }
@@ -143,10 +149,9 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
                                 servico.sv_aparelho,
                                 servico.sv_defeito, servico.sv_senha,
                                 servico.sv_situacao, servico.sv_acessorios, servico.sv_valorServico, servico.sv_valorPeca,
-                                servico.sv_lucroServico.ToString("C"), servico.sv_servicoFeito, servico.sv_dataConclusao.ToShortDateString(),
+                                servico.sv_lucroServico.ToString("C"), servico.sv_servicoFeito, servico.sv_dataConclusao.ToString(),
                                 (servico.sv_status == 1) ? "Em Andamento" : "Concluido");
                         }
-
                     }
                 }
 
@@ -163,24 +168,14 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
         private void contextEditarServico_Click(object sender, EventArgs e)
         {
-            int qtdDeLinhasSelecionadas = gdv_CadastroServicosConcluidos.SelectedRows.Count;
-
-
-            if (qtdDeLinhasSelecionadas == 0)
-            {
-                MessageBox.Show("SELECIONE ALGUMA LINHA DA TABELA PARA EDITAR OU DELETAR OS DADOS!", "ATENÇÃO",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                SetarValoresTextBox();
-            }
-
+            SetarValoresTextBox();
         }
 
         private void contextVerGarantiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //
+
+            SetarValoresTextBoxFormVerGarantia();
+
         }
 
         private void txtBuscarServicoAparelho_KeyUp(object sender, KeyEventArgs e)
@@ -205,7 +200,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             else
             {
                 form_GarantiaServicosConcluidos form = new form_GarantiaServicosConcluidos(this);
-                form.dtpDataAtualCadastro.Text = gdv_CadastroServicosConcluidos.SelectedCells[12].Value.ToString();
+                form.txtDataCadastroServico.Text = gdv_CadastroServicosConcluidos.SelectedCells[0].Value.ToString();
                 form.txtNomeCliente.Text = gdv_CadastroServicosConcluidos.SelectedCells[2].Value.ToString();
                 form.txtAparelho.Text = gdv_CadastroServicosConcluidos.SelectedCells[3].Value.ToString();
                 form.txtDefeito.Text = gdv_CadastroServicosConcluidos.SelectedCells[4].Value.ToString();
@@ -214,6 +209,28 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             }
 
 
+        }
+
+        private void SetarValoresTextBoxFormVerGarantia()
+        {
+            int qtdDeLinhasSelecionadas = gdv_CadastroServicosConcluidos.SelectedRows.Count;
+
+
+            if (qtdDeLinhasSelecionadas == 0)
+            {
+                MessageBox.Show("SELECIONE ALGUMA LINHA DA TABELA PARA EDITAR OU DELETAR OS DADOS!", "ATENÇÃO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                form_VerGarantia form = new form_VerGarantia(this);
+                form.lblID.Text = gdv_CadastroServicosConcluidos.SelectedCells[1].Value.ToString();
+                form.txtDataEmissaoGarantia.Text = gdv_CadastroServicosConcluidos.SelectedCells[12].Value.ToString();
+                form.txtNomeCliente.Text = gdv_CadastroServicosConcluidos.SelectedCells[2].Value.ToString();
+                form.txtServicoFeito.Text = gdv_CadastroServicosConcluidos.SelectedCells[11].Value.ToString();
+                form.txtAparelho.Text = gdv_CadastroServicosConcluidos.SelectedCells[3].Value.ToString();
+                form.ShowDialog();
+            }
         }
 
         private void contextNãoConcluidoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -241,6 +258,7 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
         {
             gdv_CadastroServicosConcluidos.ClearSelection();
         }
+
     }
 }
 

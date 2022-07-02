@@ -16,15 +16,15 @@ namespace Sistema_OS___Assistência_Técnica._2___Classes
 
         public DateTime gar_data_inicial { get; set; }
 
-        public  DateTime gar_data_final { get; set; }
+        public DateTime gar_data_final { get; set; }
 
-        GarantiaEstrutura(int _gar_Id, int _gar_fk_idServico, int _gar_fk_idCliente, DateTime _gar_data_inicial,
+        public GarantiaEstrutura(int _gar_Id, int _gar_fk_idServico, int _gar_fk_idCliente,
             DateTime _gar_data_final)
         {
             gar_id = _gar_Id;
             gar_fk_idServico = _gar_fk_idServico;
             gar_fk_idCliente = _gar_fk_idCliente;
-            gar_data_inicial = _gar_data_inicial;
+            gar_data_inicial = DateTime.Now;
             gar_data_final = _gar_data_final;
         }
 

@@ -162,7 +162,24 @@
         AKaq+0iSJG3rrQoAAAAAH8kFBVLh2jMCnNcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+  <data name="dfgdfgdf.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="btnSalvarGarantia.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIMAAAAnCAYAAAAsEPueAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVHhe7dIxEYAwAMDAKgInrf9DBgLgWDLhoD/8lDXj
+        WOs613rY2/fB+AvsyQzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQM
+        xAzEDMQMxAzEDMQMxAzEDMQMxAzEDMQMZJxz3n+Bzcx5v9ED3eQWSIuBAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="bunifuFormDock1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="lblIDCliente.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; direction: rtl; }</value>
+  </data>
+  <data name="lblIDservico.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; direction: rtl; }</value>
   </data>
 </root>

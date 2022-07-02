@@ -46,10 +46,8 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
 
             foreach (CadastroClienteEstrutura cliente in BancoGlobal.listaCadastrosClientesEstrutura)
             {
-
                 if (cliente.cl_id == Convert.ToInt32(lblAlteracaoClientes.Text))
                 {
-
                     cliente.cl_nome = txtNomeCliente.Text;
                     cliente.cl_telefone = txtNumeroTelefone.Text;
                     cliente.cl_cpf = txtDocumentoCPF.Text;
@@ -71,70 +69,23 @@ namespace Sistema_OS___Assistência_Técnica._3___Forms
             ValidarDigitos.ApenasLetrasBackspace(e);
         }
 
-        private void PadraoDocumentoCPF(object sender, KeyPressEventArgs e)
-        {
-            TextBox CPF = sender as TextBox;
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
-            {
-                CPF.SelectionStart = CPF.Text.Length + 1;
-
-                if (CPF.Text.Length == 3 || CPF.Text.Length == 7)
-                    CPF.Text += ".";
-                else if (CPF.Text.Length == 11)
-                    CPF.Text += "-";
-                CPF.SelectionStart = CPF.Text.Length + 1;
-            }
-        }
-        private void PadraoTelefonicoTextBox(object sender, KeyPressEventArgs e)
-        {
-            TextBox Tel = sender as TextBox;
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
-            {
-                Tel.SelectionStart = Tel.Text.Length + 1;
-
-                if (Tel.Text.Length == 0 || Tel.Text.Length == 1)
-                    Tel.Text += "(";
-                else if (Tel.Text.Length == 3)
-                    Tel.Text += ")";
-                else if (Tel.Text.Length == 8)
-                    Tel.Text += "-";
-                Tel.SelectionStart = Tel.Text.Length + 1;
-            }
-        }
 
         private void txtDocumentoCPF_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDigitos.ApenasNumerosBackspace(e);
-            PadraoDocumentoCPF(sender, e);
+          ValidarDigitos.PadraoDocumentoCPFTextbox(sender, e);
         }
 
         private void txtNumeroTelefone_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDigitos.ApenasNumerosBackspace(e);
-            PadraoTelefonicoTextBox(sender, e);
+           ValidarDigitos.PadraoTelefonicoTextBox(sender, e);
         }
 
         private void txtTelefoneRecado_KeyPress(object sender, KeyPressEventArgs e)
         {
             ValidarDigitos.ApenasNumerosBackspace(e);
-
-            TextBox Tel = sender as TextBox;
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
-            {
-                Tel.SelectionStart = Tel.Text.Length + 1;
-
-                if (Tel.Text.Length == 0 || Tel.Text.Length == 1)
-                    Tel.Text += "(";
-                else if (Tel.Text.Length == 3)
-                    Tel.Text += ")";
-                else if (Tel.Text.Length == 8)
-                    Tel.Text += "-";
-                Tel.SelectionStart = Tel.Text.Length + 1;
-            }
+            ValidarDigitos.PadraoTelefonicoTextBox(sender, e);
         }
     }
 }
-
-
-
-
